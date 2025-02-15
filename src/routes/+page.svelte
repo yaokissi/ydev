@@ -19,13 +19,13 @@
 
          "
     >
-        <p class="text-white text-center text-3xl pt-15 z-1">Hi, I'm KISSI Yao but call me the Big</p>
+        <p class="text-white text-center text-3xl pt-15 z-1">Hi, I'm Yao The big </p>
         <h1
                 class="
-            ml-10 font-bold text-white mt-10 z-1 text-center
+            ml-10 font-bold text-3xl text-white mt-10 z-1 text-center
            "
         >
-            Frontend Developer passionate about creating beautiful websites
+            Frontend Developer passionate about creating beautiful websites.
         </h1>
 
         <model-viewer
