@@ -16,7 +16,13 @@
             bg-gradient-to-b
             from-[#252529]
             to-black
-            text-white"
+            text-white
+            fixed
+            top-0
+            left-0
+            w-full
+            z-1"
+
 
 >
     <div class="full rounded-full">
@@ -35,4 +41,7 @@
     </div>
 </nav>
 <style>
+    nav {
+        font-family: 'General Sans', sans-serif;
+    }
 </style>

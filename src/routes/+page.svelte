@@ -19,10 +19,10 @@
 
          "
     >
-        <p class="text-white text-center text-3xl pt-15 z-1">Hi, I'm Yao The big </p>
+        <p class="text-white text-center text-3xl pt-35 ">Hi, I'm Yao The big </p>
         <h1
                 class="
-            ml-10 font-bold text-3xl text-white mt-10 z-1 text-center
+            ml-10 font-bold text-2xl text-white mt-10 text-center
            "
         >
             Frontend Developer passionate about creating beautiful websites.
@@ -32,17 +32,33 @@
                 class=""
                 src={modelSrc}
                 alt="My setup 3d model"
-                auto-rotate
+
+
                 camera-controls
                 loading="lazy"
                 style="width: 100%; height: 650px;">
         </model-viewer>
         <div class="flex justify-center mt-10">
-        <button class="border border-gray-300  text-gray-800 px-5 py-2 rounded cursor w-100 hover:bg-gray-10 text-white">Let's Work Together</button>
+        <button class="border border-gray-300  text-gray-800 px-5 py-2 rounded cursor w-100 hover:bg-gray-10 text-white">
+            <span class="btn-ping_dot"></span>
+            Let's Work Together
+        </button>
         </div>
     </div>
 </header>
 <AboutSection></AboutSection>
 <style>
     @import "tailwindcss";
+
+        .btn-ping_dot {
+            position: relative;
+            display: inline-flex;
+            margin-right: 20px;
+            height: .75rem;
+            width: .75rem;
+            border-radius: 9999px;
+            --tw-bg-opacity: 1;
+            background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+        }
+
 </style>
