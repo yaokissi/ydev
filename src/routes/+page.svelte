@@ -32,9 +32,11 @@
                 class=""
                 src={modelSrc}
                 alt="My setup 3d model"
-
-
+                auto-rotate
                 camera-controls
+                camera-orbit="180deg 65deg 105%"
+                field-of-view="37deg"
+                disable-zoom
                 loading="lazy"
                 style="width: 100%; height: 650px;">
         </model-viewer>
