@@ -1,5 +1,6 @@
 <script>
-    import { Moon, Sun } from 'lucide-svelte';
+    import { Moon, Sun, Languages } from 'lucide-svelte';
+
     const menuItems = [
         { name: "Home", href: "/" },
         { name: "About", href: "#about" },
@@ -22,8 +23,6 @@
             left-0
             w-full
             z-1"
-
-
 >
     <div class="full rounded-full">
         <img src={avatarImage} alt="avatar" class=" bg-white-300 rounded-full h-20 w-25">
@@ -36,8 +35,14 @@
         {/each}
     </ul>
     <div>
-        <Moon class="h-6 w-6" />
-        <Sun class="h-6 w-6" />
+        <Languages
+        class="
+            text-white
+            w-8
+            h-8
+            cursor-pointer
+            hover:text-gray-300">
+        </Languages>
     </div>
 </nav>
 <style>
