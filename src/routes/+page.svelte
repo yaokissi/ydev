@@ -1,6 +1,7 @@
 <script>
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import AboutSection from "$lib/components/AboutSection.svelte";
+    import FooterSection from "$lib/components/FooterSection.svelte";
     import "../app.css";
     import { onMount } from "svelte";
 
@@ -52,6 +53,7 @@
 id="about">
 
 </AboutSection>
+<FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
 

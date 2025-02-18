@@ -1,5 +1,4 @@
 <script>
-import GlobeComponent from "./GlobeComponent.svelte";
 
 </script>
 <div
@@ -43,12 +42,11 @@ import GlobeComponent from "./GlobeComponent.svelte";
     </div>
     <div class=" rightSideAboutSection p-5 flex flex-col justify-between ">
         <div class="border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
-            <img alt="globe image"
-                 class="object-contain
-                 w-full
-                 h-[276px]"
+            <img
+                    alt="globe image"
+                 class="object-contain w-full h-[276px]"
                  src="/assets/3d-Earth-Globe.svg"
-            />
+            >
             <h2 class="text-white font-bold mt-4">
                 I'm very flexible with time zone communications & locations
             </h2>
