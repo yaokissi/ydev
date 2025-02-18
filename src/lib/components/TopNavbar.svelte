@@ -1,5 +1,5 @@
 <script>
-    import { Moon, Sun, Languages } from 'lucide-svelte';
+    import { Languages } from 'lucide-svelte';
 
     const menuItems = [
         { name: "Home", href: "/" },
@@ -8,6 +8,18 @@
         { name: "Contact", href: "#contact" },
     ];
     let avatarImage = "/images/avatar/avatar1.png";
+
+
+    function handleClick(e, href) {
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
 </script>
 
 <nav
@@ -30,7 +42,13 @@
     <ul class="flex justify-center space-x-4">
         {#each menuItems as item}
             <li class="">
-                <a href="{item.href}">{item.name}</a>
+                <a
+                        href={item.href}
+                        on:click={(e) => handleClick(e, item.href)}
+                        class="hover:text-gray-300 transition-colors"
+                >
+                    {item.name}
+                </a>
             </li>
         {/each}
     </ul>

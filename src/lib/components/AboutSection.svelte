@@ -2,7 +2,10 @@
 import GlobeComponent from "./GlobeComponent.svelte";
 
 </script>
-<div class=" bg-[#010103] p-10 width flex justify-around items-center">
+<div
+        class=" bg-[#010103] p-10 width flex justify-around items-center"
+        id="about"
+>
     <div>
         <div class="flex w-full max-w-6xl gap-6 justify-around items-stretch">
             <div class="bg-[#0e0e10] p-8 border border-gray-700 rounded-lg flex-1 max-w-[700px]   flex flex-col">
@@ -40,7 +43,12 @@ import GlobeComponent from "./GlobeComponent.svelte";
     </div>
     <div class=" rightSideAboutSection p-5 flex flex-col justify-between ">
         <div class="border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
-            <img src="/assets/3d-Earth-Globe.svg" alt="globe image" class="object-contain w-full h-[276px]" />
+            <img alt="globe image"
+                 class="object-contain
+                 w-full
+                 h-[276px]"
+                 src="/assets/3d-Earth-Globe.svg"
+            />
             <h2 class="text-white font-bold mt-4">
                 I'm very flexible with time zone communications & locations
             </h2>

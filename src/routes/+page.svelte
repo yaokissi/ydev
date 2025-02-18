@@ -48,7 +48,10 @@
         </div>
     </div>
 </header>
-<AboutSection></AboutSection>
+<AboutSection
+id="about">
+
+</AboutSection>
 <style>
     @import "tailwindcss";
 
