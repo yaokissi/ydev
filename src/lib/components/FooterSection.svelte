@@ -1,13 +1,17 @@
 <script>
-import { Copyright, Github, Linkedin } from 'lucide-svelte';
+import {Copyright} from "lucide-svelte";
 
-const socialsLogo = [
-    { name: "Twitter", href: "https://x.com/YaoKissi2",},
-    { name: "Github", href: "https://github.com/yaokissi" },
-    { name: "Linkedin", href: "https://www.linkedin.com/in/yao-kissi/" },
-    {name : "Threads", href: "https://www.threads.net/@bigyaos"}
-]
+import twitterIcon from '/static/images/twitter.png';
+import githubIcon from '/static/images/github.png';
+import linkedinIcon from '/static/images/linkedin.png';
+import threadsIcon from '/static/images/threads.png';
 
+    const socialsLogo = [
+        { path: twitterIcon, href: "https://x.com/YaoKissi2" },
+        { path: githubIcon, href: "https://github.com/yaokissi" },
+        { path: linkedinIcon, href: "https://www.linkedin.com/in/yao-kissi/" },
+        { path: threadsIcon, href: "https://www.threads.net/@bigyaos" }
+    ];
 const footerLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "#about" },
@@ -18,8 +22,8 @@ const footerLinks = [
 <div class="mt-20 p-10 flex justify-around">
     <div>
         <div>
-            {#each socialsLogo as links}
-                <p>{links.name}</p>
+            {#each socialsLogo as logo}
+            <a href={logo.href}> <img src={logo.path}/> </a>
             {/each}
         </div>
         <ul>
