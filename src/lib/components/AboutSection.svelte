@@ -54,6 +54,7 @@
                 I'm based in Rjieka, Croatia and open to remote work worldwide.
             </p>
             <button class="border border-gray-300 text-gray-800 px-5 py-2 rounded cursor w-full hover:bg-gray-100 text-white mt-4">
+                <span class="btn-ping_dot"></span>
                 Contact me
             </button>
         </div>
@@ -83,5 +84,15 @@
     }
     .rightSideAboutSection > div:last-child {
         flex: 3; /* This makes the second div take up roughly 30% of the space */
+    }
+    .btn-ping_dot {
+        position: relative;
+        display: inline-flex;
+        margin-right: 20px;
+        height: .75rem;
+        width: .75rem;
+        border-radius: 9999px;
+        --tw-bg-opacity: 1;
+        background-color: rgb(34 197 94 / var(--tw-bg-opacity));
     }
 </style>

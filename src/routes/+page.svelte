@@ -6,6 +6,7 @@
     import { onMount } from "svelte";
 
     let modelSrc = "../models/hacker-room.glb";
+    let visible = false;
     onMount(() => {
         // Code qui dépend de window
         import("@google/model-viewer");
@@ -28,19 +29,22 @@
         >
             Frontend Developer passionate about creating beautiful websites.
         </h1>
+        <div>
+            <img src="/static/assets/vueGif.gif">
+            <model-viewer
+                    class=""
+                    src={modelSrc}
+                    alt="My setup 3d model"
+                    auto-rotate
+                    camera-controls
+                    camera-orbit="180deg 65deg 105%"
+                    field-of-view="30deg"
+                    disable-zoom
+                    loading="lazy"
+                    style="width: 100%; height: 650px;">
+            </model-viewer>
+        </div>
 
-        <model-viewer
-                class=""
-                src={modelSrc}
-                alt="My setup 3d model"
-                auto-rotate
-                camera-controls
-                camera-orbit="180deg 65deg 105%"
-                field-of-view="30deg"
-                disable-zoom
-                loading="lazy"
-                style="width: 100%; height: 650px;">
-        </model-viewer>
         <div class="flex justify-center mt-10">
         <button class="border border-gray-300  text-gray-800 px-5 py-2 rounded cursor w-100 hover:bg-gray-10 text-white">
             <span class="btn-ping_dot"></span>
@@ -53,10 +57,13 @@
 id="about">
 
 </AboutSection>
+<hr class="text-gray-700">
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
-
+        html {
+            background: black;
+        }
         .btn-ping_dot {
             position: relative;
             display: inline-flex;
@@ -67,5 +74,7 @@ id="about">
             --tw-bg-opacity: 1;
             background-color: rgb(34 197 94 / var(--tw-bg-opacity));
         }
+hr {
 
+}
 </style>
