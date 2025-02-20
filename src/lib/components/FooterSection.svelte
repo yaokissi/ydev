@@ -53,7 +53,7 @@ const footerLinks = [
         </ul>
     </div>
     <div class="text-white flex justify-between">
-        <Copyright></Copyright> <p class="ml-10">2025 Yao KISSI. All rights reserved.</p>
+        <Copyright class="w-5"></Copyright> <p class="ml-3">2025 Yao KISSI. All rights reserved.</p>
     </div>
 
 </div>

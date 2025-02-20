@@ -6,9 +6,7 @@
     import { onMount } from "svelte";
 
     let modelSrc = "../models/hacker-room.glb";
-    let visible = false;
     onMount(() => {
-        // Code qui dépend de window
         import("@google/model-viewer");
     });
 </script>
@@ -29,8 +27,13 @@
         >
             Frontend Developer passionate about creating beautiful websites.
         </h1>
-        <div>
-            <img src="/static/assets/vueGif.gif">
+        <div class="
+                    bg-[url(/assets/cover.webp)]
+                    bg-center
+                    bg-no-repeat
+                    bg-contain
+                    "
+        >
             <model-viewer
                     class=""
                     src={modelSrc}
@@ -61,9 +64,7 @@ id="about">
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
-        html {
-            background: black;
-        }
+
         .btn-ping_dot {
             position: relative;
             display: inline-flex;
