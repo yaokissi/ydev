@@ -1,6 +1,7 @@
 <script>
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import AboutSection from "$lib/components/AboutSection.svelte";
+    import ProExperiences from "$lib/components/ProExperiences.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
     import "../app.css";
     import { onMount } from "svelte";
@@ -60,6 +61,7 @@
 id="about">
 
 </AboutSection>
+<ProExperiences></ProExperiences>
 <hr class="text-gray-700">
 <FooterSection></FooterSection>
 <style>
