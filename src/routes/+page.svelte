@@ -29,7 +29,7 @@
             Frontend Developer passionate about creating beautiful websites.
         </h1>
         <div class="
-                    bg-[url(/assets/cover.webp)]
+                    bg-[url(/assets/HomePageCover.webp)]
                     bg-center
                     bg-no-repeat
                     bg-contain
