@@ -16,7 +16,9 @@
     <TopNavbar></TopNavbar>
 
     <div class="
-            bg-black
+                   bg-[#010103]
+
+
 
          "
     >
@@ -66,7 +68,9 @@ id="about">
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
-
+* {
+    background-color: black;
+}
         .btn-ping_dot {
             position: relative;
             display: inline-flex;

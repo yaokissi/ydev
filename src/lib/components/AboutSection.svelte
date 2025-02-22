@@ -2,7 +2,13 @@
 
 </script>
 <div
-        class=" bg-[#010103] p-10 width flex justify-around items-center"
+        class="
+        w-[100%] mx-auto
+       bg-[#010103]
+        p-10
+        flex
+        justify-around
+        items-center"
         id="about"
 >
     <div>
@@ -69,10 +75,7 @@
 </div>
 
 <style>
-    .width {
-        width: 100%;
-        justify-content: space-around;
-    }
+
 
     .rightSideAboutSection {
         display: flex;
@@ -84,15 +87,5 @@
     }
     .rightSideAboutSection > div:last-child {
         flex: 3; /* This makes the second div take up roughly 30% of the space */
-    }
-    .btn-ping_dot {
-        position: relative;
-        display: inline-flex;
-        margin-right: 20px;
-        height: .75rem;
-        width: .75rem;
-        border-radius: 9999px;
-        --tw-bg-opacity: 1;
-        background-color: rgb(34 197 94 / var(--tw-bg-opacity));
     }
 </style>
