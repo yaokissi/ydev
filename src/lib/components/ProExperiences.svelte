@@ -1,13 +1,18 @@
 <script>
     import { BriefcaseBusiness } from 'lucide-svelte';
+    import {llclogo } from '../assets/llclogo.png';
+    import {devours_logo } from '../assets/devours_logo.jpeg';
+    import {logoEthicPortage } from '../assets/logoEthicPortage.jpg';
+    import {plantaorLogo } from '../assets/plantaorLogo.jpg';
 
     const Experiences = [
 
-        {company: '',companyLogo:'', role: '', startDate: '', endDate: ''},
-        {company: '',companyLogo:'', role: '', startDate: '', endDate: ''},
-        {company: '',companyLogo:'', role: '', startDate: '', endDate: ''},
-        {company: '',companyLogo:'', role: '', startDate: '', endDate: ''},
+        {company: '',companyLogo:'', companyWebsite:'', role: '', startDate: '', endDate: ''},
+        {company: '',companyLogo:'', companyWebsite:'', role: '', startDate: '', endDate: ''},
+        {company: '',companyLogo:'', companyWebsite:'', role: '', startDate: '', endDate: ''},
+        {company: '',companyLogo:'', companyWebsite:'', role: '', startDate: '', endDate: ''},
     ]
+
 </script>
     <div class="w-[100%] mx-auto p-10 flex justify-around text-white bg-[#010103]">
         <div>
