@@ -70,6 +70,7 @@ id="about">
     @import "tailwindcss";
 * {
     background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
         .btn-ping_dot {
             position: relative;

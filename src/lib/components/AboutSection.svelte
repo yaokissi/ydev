@@ -15,7 +15,7 @@
         <div class="flex w-full max-w-6xl gap-6 justify-around items-stretch">
             <div class="bg-[#0e0e10] p-8 border border-gray-700 rounded-lg flex-1 max-w-[700px]   flex flex-col">
                 <img
-                        src="/src/lib/assets/grid1.png"
+                        src="/src/assets/grid1.png"
                         alt="avatar"
                         class="object-contain w-full h-[276px]"
                 />
@@ -26,7 +26,7 @@
             </div>
             <div class="bg-[#0e0e10] border border-gray-700 p-8 rounded-lg flex-1 max-w-[700px]  flex flex-col">
                 <img
-                        src="/src/lib/assets/grid2.png"
+                        src="/src/assets/grid2.png"
                         alt="avatar"
                         class="object-contain w-full h-[276px]"
                 />
@@ -39,7 +39,7 @@
 
         <div class=" border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg ">
             <img
-                    src="/src/lib/assets/grid3.png"
+                    src="/src/assets/grid3.png"
                     alt="avatar"
                     class="object-contain w-full h-[276px]">
             <h2 class="text-white font-bold mt-4 ">My Passion for Coding</h2>
@@ -51,7 +51,7 @@
             <img
                     alt="globe image"
                  class="object-contain w-full h-[276px]"
-                 src="/src/lib/assets/3d-Earth-Globe.svg"
+                 src="/src/assets/3d-Earth-Globe.svg"
             >
             <h2 class="text-white font-bold mt-4">
                 I'm very flexible with time zone communications & locations
@@ -65,7 +65,7 @@
             </button>
         </div>
         <div class=" border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
-            <img src="/src/lib/assets/grid4.png" alt="avatar" class="object-contain w-full h-[276px]">
+            <img src="/src/assets/grid4.png" alt="avatar" class="object-contain w-full h-[276px]">
             <h2 class="text-white text-center font-bold mt-2">Contact Me </h2>
             <p class="text-white text-center " >
                 <a href="mailto:yaokissi.pro@gmail.com"> yaokissi.pro@gmail.com </a>

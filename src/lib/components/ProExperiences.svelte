@@ -1,10 +1,10 @@
 <script>
     import { BriefcaseBusiness } from 'lucide-svelte';
 
-    import llclogo from '/src/lib/assets/llclogo.png';
-    import devours_logo from '/src/lib/assets/devours_logo.jpeg';
-    import logoEthicPortage from '/src/lib/assets/logoEthicPortage.jpg';
-    import plantaorLogo from '/src/lib/assets/plantaorLogo.jpg';
+    import llclogo from '/src/assets/llclogo.png';
+    import devours_logo from '/src/assets/devours_logo.jpeg';
+    import logoEthicPortage from '/src/assets/logoEthicPortage.jpg';
+    import plantaorLogo from '/src/assets/plantaorLogo.jpg';
 
 
     const Experiences = [
@@ -12,34 +12,34 @@
         {
             company: "LLC Consulting",
             companyLogo:llclogo,
-            companyWebsite:'',
+            companyWebsite:"https://llc-consulting.fr/",
             role: "Web developer",
-            startDate: '',
-            endDate: ''
+            startDate: "March 2024",
+            endDate: "June 2024"
         },
         {
             company: "Devours",
             companyLogo:devours_logo,
-            companyWebsite:'',
-            role: '',
-            startDate: '',
-            endDate: ''
+            companyWebsite:"https://www.ethic-portage.fr/",
+            role: 'Wordpress developer',
+            startDate: 'December 2022',
+            endDate: 'February 2023'
         },
         {
             company: "Ethic Portage",
             companyLogo:logoEthicPortage,
-            companyWebsite:'',
-            role: '',
-            startDate: '',
-            endDate: ''
+            companyWebsite:'https://www.ethic-portage.fr/',
+            role: 'web developer',
+            startDate: 'July 2022',
+            endDate: 'August 2022'
         },
         {
             company: "Plantaor",
             companyLogo:plantaorLogo,
-            companyWebsite:'',
-            role: '',
-            startDate: '',
-            endDate: ''},
+            companyWebsite:'Plantaor.com',
+            role: 'Wordpress developer',
+            startDate: 'July 2021',
+            endDate: 'september 2021'},
     ]
 
 </script>
@@ -54,18 +54,20 @@
                 <BriefcaseBusiness class="text-gray-700"></BriefcaseBusiness>
                 <p class="ml-3">Work</p>
             </div>
+            {#each Experiences as experience}
             <div class="flex justify-between mt-5">
                 <div class="flex justify-between ">
                     <div class="bg-[#27272A] rounded-full border-2 border-zinc-700 shadow-zinc-800">
-                        <img src="/src/lib/assets/llclogo.png" width="45" alt="llc consulting logo">
+                     <a href={experience.companyWebsite}> <img src={experience.companyLogo} width="45" alt="llc consulting logo"> </a>
                     </div>
                    <div class="ml-4">
-                       LLC Consulting <br>
-                       Web developer
+                     <p>{experience.company}</p>
+                       <p>{experience.role}</p>
                    </div>
                 </div>
-                <p>04 / 2024 — Present</p>
+                <p>{experience.startDate} — {experience.endDate}</p>
             </div>
+            {/each}
         </div>
     </div>
 <style>

@@ -7,7 +7,7 @@
         { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contact" },
     ];
-    let avatarImage = "/images/avatar/avatar1.png";
+    let avatarImage = '/src/assets/avatar1.png';
 
 
     function handleClick(e, href) {
@@ -37,7 +37,7 @@
             z-1"
 >
     <div class="full rounded-full">
-        <img src={avatarImage} alt="avatar" class=" bg-white-300 rounded-full h-20 w-25">
+        <img src={avatarImage} title="avatar de KISSI Yao" alt="avatar" class=" bg-white-300 rounded-full h-20 w-25">
     </div>
     <ul class="flex justify-center space-x-4">
         {#each menuItems as item}
