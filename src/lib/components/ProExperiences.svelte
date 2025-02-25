@@ -1,10 +1,10 @@
 <script>
     import { BriefcaseBusiness } from 'lucide-svelte';
-
+    import CvButton from '/src/lib/components/CvButton.svelte';
     import llclogo from '/src/assets/llclogo.png';
-    import devours_logo from '/src/assets/devours_logo.jpeg';
-    import logoEthicPortage from '/src/assets/logoEthicPortage.jpg';
-    import plantaorLogo from '/src/assets/plantaorLogo.jpg';
+    import devours_logo from '/src/assets/devours_logo.png';
+    import logoEthicPortage from '/src/assets/logoEthicPortage.png';
+    import plantaorLogo from '/src/assets/plantaorLogo.png';
 
 
     const Experiences = [
@@ -21,8 +21,8 @@
             company: "Devours",
             companyLogo:devours_logo,
             companyWebsite:"https://www.ethic-portage.fr/",
-            role: 'Wordpress developer',
-            startDate: 'December 2022',
+            role: 'Web developer',
+            startDate: 'Dec 2022',
             endDate: 'February 2023'
         },
         {
@@ -37,7 +37,7 @@
             company: "Plantaor",
             companyLogo:plantaorLogo,
             companyWebsite:'Plantaor.com',
-            role: 'Wordpress developer',
+            role: 'Web developer',
             startDate: 'July 2021',
             endDate: 'september 2021'},
     ]
@@ -49,7 +49,7 @@
                 My <span>pro</span> experiences
             </h2>
         </div>
-        <div class="bg-[#0e0e10] w-[30%] p-5 border border-gray-700 rounded-xl">
+        <div class="bg-[#0e0e10] w-[30%] p-5 border-1 border-gray-700 rounded-xl">
             <div class="flex">
                 <BriefcaseBusiness class="text-gray-700"></BriefcaseBusiness>
                 <p class="ml-3">Work</p>
@@ -57,8 +57,8 @@
             {#each Experiences as experience}
             <div class="flex justify-between mt-5">
                 <div class="flex justify-between ">
-                    <div class="bg-[#27272A] rounded-full border-2 border-zinc-700 shadow-zinc-800">
-                     <a href={experience.companyWebsite}> <img src={experience.companyLogo} width="45" alt="llc consulting logo"> </a>
+                    <div class="bg-[#27272A] rounded-full border-1 border-zinc-700 ">
+                     <a href={experience.companyWebsite}> <img src={experience.companyLogo} class="rounded-full" width="45" title="{experience.company} logo" alt="{experience.company} logo" > </a>
                     </div>
                    <div class="ml-4">
                      <p>{experience.company}</p>
@@ -68,6 +68,7 @@
                 <p>{experience.startDate} — {experience.endDate}</p>
             </div>
             {/each}
+         <CvButton></CvButton>
         </div>
     </div>
 <style>
