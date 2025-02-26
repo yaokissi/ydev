@@ -17,9 +17,6 @@
 
     <div class="
                    bg-[#010103]
-
-
-
          "
     >
         <p class="text-white text-center text-3xl pt-35 ">Hi, I'm Yao The big </p>

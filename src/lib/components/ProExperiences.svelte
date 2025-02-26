@@ -14,8 +14,8 @@
             companyLogo:llclogo,
             companyWebsite:"https://llc-consulting.fr/",
             role: "Web developer",
-            startDate: "March 2024",
-            endDate: "June 2024"
+            startDate: "Mar 2024",
+            endDate: "Jun 2024"
         },
         {
             company: "Devours",
@@ -23,23 +23,23 @@
             companyWebsite:"https://www.ethic-portage.fr/",
             role: 'Web developer',
             startDate: 'Dec 2022',
-            endDate: 'February 2023'
+            endDate: 'Feb 2023'
         },
         {
             company: "Ethic Portage",
             companyLogo:logoEthicPortage,
             companyWebsite:'https://www.ethic-portage.fr/',
             role: 'web developer',
-            startDate: 'July 2022',
-            endDate: 'August 2022'
+            startDate: 'Jul 2022',
+            endDate: 'Aug 2022'
         },
         {
             company: "Plantaor",
             companyLogo:plantaorLogo,
             companyWebsite:'Plantaor.com',
             role: 'Web developer',
-            startDate: 'July 2021',
-            endDate: 'september 2021'},
+            startDate: 'Jul 2021',
+            endDate: 'sep 2021'},
     ]
 
 </script>
@@ -55,20 +55,20 @@
                 <p class="ml-3">Work</p>
             </div>
             {#each Experiences as experience}
-            <div class="flex justify-between mt-5">
-                <div class="flex justify-between ">
-                    <div class="bg-[#27272A] rounded-full border-1 border-zinc-700 ">
-                     <a href={experience.companyWebsite}> <img src={experience.companyLogo} class="rounded-full" width="45" title="{experience.company} logo" alt="{experience.company} logo" > </a>
+                <div class="flex justify-between items-center mt-5 border-1 border-gray-700 rounded-xl p-5">
+                    <div class="flex justify-between">
+                        <div class="bg-[#27272A] rounded-full border-1 border-zinc-700 ">
+                            <a href={experience.companyWebsite} target=""> <img src={experience.companyLogo} class="rounded-full" width="45" title="{experience.company} logo" alt="{experience.company} logo" > </a>
+                        </div>
+                        <div class="ml-4">
+                            <p>{experience.company}</p>
+                                <p class="text-xs text-gray-200">{experience.role}</p>
+                        </div>
                     </div>
-                   <div class="ml-4">
-                     <p>{experience.company}</p>
-                       <p>{experience.role}</p>
-                   </div>
+                    <p class="text-xs text-gray-500">{experience.startDate} — {experience.endDate}</p>
                 </div>
-                <p>{experience.startDate} — {experience.endDate}</p>
-            </div>
             {/each}
-         <CvButton></CvButton>
+         <CvButton class="mt-10"></CvButton>
         </div>
     </div>
 <style>
