@@ -4,7 +4,7 @@
     const menuItems = [
         { name: "Home", href: "/" },
         { name: "About", href: "#about" },
-        { name: "Projects", href: "#projects" },
+        { name: "Projects", href: "/projects" },
         { name: "Contact", href: "#contact" },
     ];
     let avatarImage = '/src/assets/avatar1.png';

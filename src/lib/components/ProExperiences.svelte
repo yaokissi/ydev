@@ -1,6 +1,9 @@
 <script>
     import { BriefcaseBusiness } from 'lucide-svelte';
+
     import CvButton from '/src/lib/components/CvButton.svelte';
+    import SocialFeed from '/src/lib/components/SocialFeed.svelte';
+
     import llclogo from '/src/assets/llclogo.png';
     import devours_logo from '/src/assets/devours_logo.png';
     import logoEthicPortage from '/src/assets/logoEthicPortage.png';
@@ -44,12 +47,8 @@
 
 </script>
     <div class="w-[100%] mx-auto p-10 flex justify-around text-white bg-[#010103]">
-        <div>
-            <h2>
-                My <span>pro</span> experiences
-            </h2>
-        </div>
-        <div class="bg-[#0e0e10] w-[30%] p-5 border-1 border-gray-700 rounded-xl">
+       <SocialFeed></SocialFeed>
+        <div class="bg-[#0e0e10] w-[30%] h-[] p-5 border-1 border-gray-700 rounded-xl">
             <div class="flex">
                 <BriefcaseBusiness class="text-gray-700"></BriefcaseBusiness>
                 <p class="ml-3">Work</p>

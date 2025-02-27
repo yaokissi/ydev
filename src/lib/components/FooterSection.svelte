@@ -16,7 +16,7 @@ import threadsIcon from '/src/threads.png';
 const footerLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
+    { name: "Projects", href: "/projects" },
     { name: "Contact", href: "#contact" },
 ];
 </script>
@@ -35,8 +35,9 @@ const footerLinks = [
             >
                 <img
                         src="{logo.path}"
+                        class="w-7 h-7"
 
-                        width="35"
+                        alt="logo social media"
                 />
 
             </a>
