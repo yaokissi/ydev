@@ -14,7 +14,7 @@
         </article>
     </section>
     <section class="mt-15 ml-auto mr-auto w-[90%]">
-        <article class=" w-[30%] p-5 cursor-pointer hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
+        <article class=" group w-[30%] p-5 cursor-pointer hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
             <div>
                 <img
                         src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
@@ -28,11 +28,11 @@
                     "
                         alt="Project logo" title="projects logo">
                 <h3 class="mt-4 font-bold">Spotify clone</h3>
-                <p class="mt-3 mb-4 text-gray-500 text-sm">Spotify web application made with vue 3 & Tailwind. </p>
+                <p class="mt-3 mb-4 text-zinc-600 text-sm">Spotify web application made with vue 3 & Tailwind. </p>
                 <a
                         href="https://spotify-clone-git-main-yaokissis-projects.vercel.app/"
-                        class="mt-4">
-                    <Link class="w-6 h-6"></Link>
+                        class=" flex items-center gap-2 mt-4 text-zinc-200 group-hover:text-[#22d3ee]">
+                    <Link class=" w-5 h-5 text-zinc-300 group-hover:text-[#22d3ee] "></Link>
                     Projects Link
                 </a>
             </div>
@@ -42,5 +42,8 @@
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
+
+
+
 
 </style>
