@@ -61,7 +61,6 @@ id="about">
 
 </AboutSection>
 <ProExperiences></ProExperiences>
-<hr class="text-gray-700">
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
@@ -79,7 +78,5 @@ id="about">
             --tw-bg-opacity: 1;
             background-color: rgb(34 197 94 / var(--tw-bg-opacity));
         }
-hr {
 
-}
 </style>

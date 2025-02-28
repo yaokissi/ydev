@@ -17,9 +17,10 @@ const footerLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "#about" },
     { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
 ];
 </script>
+<hr class="text-gray-700">
 <div class="pt-20
             p-10 flex
             justify-around
