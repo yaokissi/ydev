@@ -49,7 +49,7 @@
     <div class=" rightSideAboutSection p-5 flex flex-col justify-between ">
         <div class="border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
             <img
-                    alt="globe image"
+                    alt="globe"
                  class="object-contain w-full h-[276px]"
                  src="/src/assets/3d-Earth-Globe.svg"
             >
