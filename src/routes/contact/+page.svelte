@@ -4,8 +4,26 @@
 </script>
 
 <TopNavbar></TopNavbar>
-<main class="h-[100vh] bg-[#0e0e10] text-white">
-    <article class="pt-30 ml-auto mr-auto w-[90%]">
+<main
+        class="
+        mt-50
+        h-[100vh]
+        bg-[#0e0e10]
+        text-white
+
+        "
+>
+    <article
+            class="
+            pt-30
+            ml-auto
+            mr-auto
+            w-[50%]
+            bg-red-500
+
+
+">
+        <img src="../src/assets/terminal.png"î alt="window computer">
         <h1 class="text-white-500 text-4xl font-bold ">Let's talk</h1>
         <p>I commit to responding to your message within a maximum delay of 2 hours.</p>
         <form method="POST" action="/contact">
@@ -29,7 +47,8 @@
                 </label>
             </div>
             <button
-                    class="border
+                    class="
+                    border
                     border-gray-300
                     mt-10
                     text-gray-800
@@ -47,4 +66,7 @@
 
 <style>
     @import "tailwindcss";
+    body{
+background-color: black;
+    }
 </style>
