@@ -6,7 +6,7 @@
 <TopNavbar></TopNavbar>
 <main
         class="
-        mt-50
+
         h-[100vh]
         bg-[#0e0e10]
         text-white
@@ -15,15 +15,16 @@
 >
     <article
             class="
-            pt-30
+            z-[1]
+
             ml-auto
             mr-auto
-            w-[50%]
+            w-[80%]
             bg-red-500
 
 
 ">
-        <img src="../src/assets/terminal.png"î alt="window computer">
+        <img src="../src/assets/terminal.png"  alt="window computer" class="z-[-1]">
         <h1 class="text-white-500 text-4xl font-bold ">Let's talk</h1>
         <p>I commit to responding to your message within a maximum delay of 2 hours.</p>
         <form method="POST" action="/contact">
