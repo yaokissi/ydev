@@ -24,7 +24,7 @@
 
 
 ">
-        <img src="../src/assets/terminal.png"  alt="window computer" class="z-[-1]">
+        <img src="../src/assets/terminal.png"  alt="terminal background" class="absolute inset-0 ">
         <h1 class="text-white-500 text-4xl font-bold ">Let's talk</h1>
         <p>I commit to responding to your message within a maximum delay of 2 hours.</p>
         <form method="POST" action="/contact">
