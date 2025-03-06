@@ -47,15 +47,15 @@
     ];
 </script>
 
-<section id="social-feed" class="py-16 bg-[#0e0e10] text-white">
+<section id="social-feed" class="py-16 bg-[#0e0e10] border-1 border-gray-700 rounded-xl text-white">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-heading font-bold mb-8 text-center">
-            <span class="text-blue-400">socials medias</span> activities
+            <span class="text-blue-400">Socials</span>  Medias
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {#each socialUpdates as update}
-                <div class="bg-[#1a1a1c] rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-all">
+                <div class="bg-[#010103] rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-all">
                     <div class="flex items-center mb-3">
                         <div class="w-10 h-10 flex items-center justify-center bg-[#27272A] rounded-full">
                             <img src={update.icon} alt="icon" class="w-6 h-6" />

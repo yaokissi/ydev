@@ -3,6 +3,80 @@
 
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
+
+    const projectsArray = [
+        {
+            name: "Spotify clone",
+            description: "Spotify web application made with vue 3 & Tailwind.",
+            link: "https://spotify-clone-git-main-yaokissis-projects.vercel.app/",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+        },
+        {
+            name: "Iphone 16",
+            description: "Customize your own Iphone 16 color with this interactive ThreeJs app.",
+            link: "https://iphone-16-three-js.vercel.app/",
+            logo: "https://logo-marque.com/wp-content/uploads/2020/04/Apple-Logo.png"
+        },
+        {
+            name: "Sports dashboard",
+            description: "Sports dashboard to see the latest sports news.",
+            link: "https://github.com/yaokissi/dashboard",
+            logo: "https://banner2.cleanpng.com/20180130/hie/av2nbihxy.webp"
+        },
+        {
+            name: "Weather app",
+            description: "Weather app to get the weather of any city.",
+            link: "https://github.com/yaokissi/Weather-App",
+            logo: "https://static.wikia.nocookie.net/ipod/images/d/d6/Weather_iOS_15.png/revision/latest/scale-to-width-down/1000?cb=20220611140027"
+        },
+        {
+            name: "Uber Eats clone",
+            description: "Uber Eats home page clone made with vue 3",
+            link: "https://vue3-ubereats-five.vercel.app/#/",
+            logo: "https://play-lh.googleusercontent.com/tYRirzPrNIJd6rw48wFf2caJBUTEXaKvlMn7JOm1ALQ2NM7GYwzpMClT_L18bl_MF_mL=w480-h960-rw"
+        },
+        {
+            name: "Jersey Makers",
+            description: "Tool to create your own wallpaper jersey with your favorite NBA team.",
+            link: "https://github.com/yaokissi/jersey-makers",
+            logo: "https://banner2.cleanpng.com/20180130/hie/av2nbihxy.webp"
+        }
+    ]
+
+    class Project {
+        constructor(name, description, link, logo) {
+            this.name = name;
+            this.description = description;
+            this.link = link;
+            this.logo = logo;
+        }
+    }
+  let projectData = [];
+  let allProjects = [];
+
+    const makeProjectsData = () => {
+        let threeProjects = [];
+
+        for (const project of projectsArray) {
+            const new_project = new Project(project.name, project.description, project.link, project.logo);
+            allProjects.push(new_project);
+            threeProjects.push(new_project);
+
+            if (threeProjects.length === 3) {
+                projectData.push([...threeProjects]); // On pousse une copie du tableau
+                threeProjects = []; // On réinitialise
+            }
+        }
+
+        // Ajouter les projets restants s'il y en a
+        if (threeProjects.length > 0) {
+            projectData.push([...threeProjects]);
+        }
+    }
+
+    makeProjectsData();
+    console.log(projectData);
+
 </script>
 
 <TopNavbar></TopNavbar>
@@ -15,37 +89,23 @@
         </article>
     </section>
     <section class="mt-15 ml-auto mr-auto w-[90%]">
-        <article class=" group w-[30%] p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
-            <div>
-                <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
-                     class="w-9
-                            h-9
-                            bg-[#27272A]
-                            border-2
-                            border-gray-700
-                            rounded-full
-
-                    "
-                        alt="Project logo" title="projects logo">
-                <h3 class="mt-4 font-bold">Spotify clone</h3>
-                <p class="mt-3 mb-4 text-zinc-600 text-sm">Spotify web application made with vue 3 & Tailwind. </p>
-                <a
-                        href="https://spotify-clone-git-main-yaokissis-projects.vercel.app/"
-                        target="_blank"
-                        class=" flex
-                        items-center
-                        gap-2
-                        mt-4
-                        text-zinc-200
-                        group-hover:text-[#22d3ee]
-                        "
-                >
-                    <Link class=" w-5 h-5 text-zinc-300 group-hover:text-[#22d3ee] "></Link>
-                    Projects Link
-                </a>
+        {#each projectData as row}
+            <div class="flex gap-4 mt-10">
+                {#each row as project}
+                    <article class="group w-[30%] p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
+                        <div>
+                            <img src="{project.logo}" class="w-9 h-9 bg-[#27272A] border-2 border-gray-700 rounded-full" alt="Project logo" title="{project.name}">
+                            <h3 class="mt-4 font-bold">{project.name}</h3>
+                            <p class="mt-3 mb-4 text-zinc-600 text-sm">{project.description}</p>
+                            <a href="{project.link}" target="_blank" class="flex items-center gap-2 mt-4 text-zinc-200 group-hover:text-[#22d3ee]">
+                                <Link class="w-5 h-5 text-zinc-300 group-hover:text-[#22d3ee]"></Link>
+                                Project Link
+                            </a>
+                        </div>
+                    </article>
+                {/each}
             </div>
-        </article>
+        {/each}
     </section>
 </main>
 <FooterSection></FooterSection>
