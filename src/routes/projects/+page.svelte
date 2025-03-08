@@ -15,7 +15,7 @@
             name: "Iphone 16",
             description: "Customize your own Iphone 16 color with this interactive ThreeJs app.",
             link: "https://iphone-16-three-js.vercel.app/",
-            logo: "https://logo-marque.com/wp-content/uploads/2020/04/Apple-Logo.png"
+            logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg"
         },
         {
             name: "Sports dashboard",
@@ -27,7 +27,7 @@
             name: "Weather app",
             description: "Weather app to get the weather of any city.",
             link: "https://github.com/yaokissi/Weather-App",
-            logo: "https://static.wikia.nocookie.net/ipod/images/d/d6/Weather_iOS_15.png/revision/latest/scale-to-width-down/1000?cb=20220611140027"
+            logo: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Weather_%28iOS%29.png"
         },
         {
             name: "Uber Eats clone",
