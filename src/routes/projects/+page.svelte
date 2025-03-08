@@ -15,7 +15,7 @@
             name: "Iphone 16",
             description: "Customize your own Iphone 16 color with this interactive ThreeJs app.",
             link: "https://iphone-16-three-js.vercel.app/",
-            logo: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Apple_logo_grey.svg"
+            logo: "https://i.ibb.co/TMCWM7bb/apple-1.png"
         },
         {
             name: "Sports dashboard",
@@ -39,7 +39,7 @@
             name: "Jersey Makers",
             description: "Tool to create your own wallpaper jersey with your favorite NBA team.",
             link: "https://github.com/yaokissi/jersey-makers",
-            logo: "https://banner2.cleanpng.com/20180130/hie/av2nbihxy.webp"
+            logo: "https://i.ibb.co/ch5m4hts/basketball-jersey.png"
         }
     ]
 
@@ -63,8 +63,10 @@
             threeProjects.push(new_project);
 
             if (threeProjects.length === 3) {
-                projectData.push([...threeProjects]); // On pousse une copie du tableau
-                threeProjects = []; // On réinitialise
+                // On pousse une copie du tableau
+                projectData.push([...threeProjects]);
+                // On réinitialise
+                threeProjects = [];
             }
         }
 
@@ -90,9 +92,9 @@
     </section>
     <section class="mt-15 ml-auto mr-auto w-[90%]">
         {#each projectData as row}
-            <div class="flex gap-4 mt-10">
+            <div class="flex flex-col md:flex-row gap-4 mt-10">
                 {#each row as project}
-                    <article class="group w-[30%] p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
+                    <article class="group lg:w-[30%]  p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
                         <div>
                             <img src="{project.logo}" class="w-9 h-9 bg-[#27272A] border-2 border-gray-700 rounded-full" alt="Project logo" title="{project.name}">
                             <h3 class="mt-4 font-bold">{project.name}</h3>
