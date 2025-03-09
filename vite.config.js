@@ -7,4 +7,8 @@ export default defineConfig({
 		tailwindcss(),
 		sveltekit(),
 	],
+	server: {
+		host: true, // Expose to all network interfaces
+		port: 5173  // Default Vite port
+	}
 });

@@ -21,10 +21,14 @@ const footerLinks = [
 ];
 </script>
 <hr class="text-gray-700">
-<div class="pt-20
-            p-10 flex
+<div class="
+            pt-10
+            p-10
+            flex
             justify-around
+            flex-wrap
             bg-black
+
             ">
     <div>
         <div class="block flex ">
@@ -54,7 +58,7 @@ const footerLinks = [
             {/each}
         </ul>
     </div>
-    <div class="text-white flex justify-between">
+    <div class="text-white flex justify-between items-center mt-10 md:mt-0 ">
         <Copyright class="w-5"></Copyright> <p class="ml-3">2025 Yao KISSI. All rights reserved.</p>
     </div>
 

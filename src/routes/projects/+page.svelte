@@ -1,8 +1,11 @@
 <script>
     import { Link } from 'lucide-svelte';
-
+    import {onMount} from "svelte";
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
+
+
+
 
     const projectsArray = [
         {
@@ -43,6 +46,7 @@
         }
     ]
 
+
     class Project {
         constructor(name, description, link, logo) {
             this.name = name;
@@ -51,10 +55,12 @@
             this.logo = logo;
         }
     }
-  let projectData = [];
-  let allProjects = [];
+
+    let projectData = [];
+    let allProjects = [];
 
     const makeProjectsData = () => {
+        projectData = []; // Réinitialiser pour éviter un push multiple
         let threeProjects = [];
 
         for (const project of projectsArray) {
@@ -63,26 +69,31 @@
             threeProjects.push(new_project);
 
             if (threeProjects.length === 3) {
-                // On pousse une copie du tableau
                 projectData.push([...threeProjects]);
-                // On réinitialise
                 threeProjects = [];
             }
         }
 
-        // Ajouter les projets restants s'il y en a
         if (threeProjects.length > 0) {
             projectData.push([...threeProjects]);
         }
-    }
-
-    makeProjectsData();
+    };
     console.log(projectData);
+
+    onMount(() => {
+        makeProjectsData();
+
+        document.querySelectorAll('[data-layout]').forEach((el) => {
+            el.classList.add("flex-col", "md:flex-row");
+        });
+
+    });
+
 
 </script>
 
 <TopNavbar></TopNavbar>
-<main class="bg-[#0e0e10] h-[100vh] pt-30 text-white ">
+<main class="bg-[#0e0e10] h-[100vh] h-full pt-30 pb-20 text-white ">
     <section class="ml-auto mr-auto w-[90%]" >
         <article>
             <h1 class="text-4xl font-bold ">A showcase of some projects that i worked on. </h1>
@@ -92,7 +103,7 @@
     </section>
     <section class="mt-15 ml-auto mr-auto w-[90%]">
         {#each projectData as row}
-            <div class="flex flex-col md:flex-row gap-4 mt-10">
+            <div class="flex flex-col md:flex-row gap-4 mt-10 transition-all duration-300 " data-layout="row">
                 {#each row as project}
                     <article class="group lg:w-[30%]  p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
                         <div>
@@ -114,7 +125,8 @@
 <style>
     @import "tailwindcss";
 
-
-
+    .flex {
+        display: flex !important;
+    }
 
 </style>

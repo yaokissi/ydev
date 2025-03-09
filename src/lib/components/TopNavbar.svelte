@@ -62,6 +62,7 @@
             hover:text-gray-300">
         </Languages>
     </div>
+
 </nav>
 <style>
     nav {
