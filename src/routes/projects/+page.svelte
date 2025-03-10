@@ -5,8 +5,6 @@
     import FooterSection from "$lib/components/FooterSection.svelte";
 
 
-
-
     const projectsArray = [
         {
             name: "Spotify clone",
@@ -103,7 +101,7 @@
     </section>
     <section class="mt-15 ml-auto mr-auto w-[90%]">
         {#each projectData as row}
-            <div class="flex flex-col md:flex-row gap-4 mt-10 transition-all duration-300 " data-layout="row">
+            <div class="flex flex-col md:!flex-row gap-4 mt-10 transition-all duration-300 " data-layout="row">
                 {#each row as project}
                     <article class="group lg:w-[30%]  p-5 cursor-pointer hover:border-1 border-[#27272A]-700 hover:bg-[#27272A] border-1 border-gray-700 rounded-xl">
                         <div>
