@@ -30,7 +30,7 @@
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
-            <div class="flex-shrink-0">
+            <div class="flex-shrink-0 ">
                 <a href="/">
                     <img
                             src={avatarImage}
@@ -38,6 +38,7 @@
                             alt="avatar"
                             class="h-20 w-25 md:w-25 md:h-20 "
                     >
+                    <p class="text-zinc-300 text-xs text-center">Ydev</p>
                 </a>
 
             </div>
@@ -85,7 +86,7 @@
                     transition:slide={{ duration: 200 }}
             >
                 <div class="container mx-auto px-4">
-                    <p class="py-3 text-sm font-bold">Menu</p>
+                    <p class="py-3 text-sm font-bold text-zinc-300 ">Menu</p>
                     {#each menuItems as item}
                         <a
                                 href={item.href}

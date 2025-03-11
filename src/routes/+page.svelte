@@ -22,16 +22,21 @@
         <p class="text-white text-center text-3xl pt-35 ">Hi, I'm Yao The big </p>
         <h1
                 class="
-            ml-10 font-bold text-2xl text-white mt-10 text-center
+           w-[100%]
+           ml-10
+           font-bold
+           text-xl
+            mr-auto
+            ml-auto
+           text-white
+           mt-10
+           text-center
            "
         >
             Frontend Developer passionate about creating beautiful websites.
         </h1>
         <div class="
-                    bg-[url(/assets/HomePageCover.webp)]
-                    bg-center
-                    bg-no-repeat
-                    bg-contain
+
                     "
         >
             <model-viewer
@@ -49,7 +54,7 @@
         </div>
 
         <div class="flex justify-center mt-10">
-        <button class="border border-gray-300  text-gray-800 px-5 py-2 rounded cursor w-100 hover:bg-gray-10 text-white">
+        <button class="border border-gray-300  text-zinc-300 px-5 py-2 rounded cursor-pointer w- hover:bg-gray-10 ">
             <span class="btn-ping_dot"></span>
             Let's Work Together
         </button>
