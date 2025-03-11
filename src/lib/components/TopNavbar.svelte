@@ -31,12 +31,15 @@
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
             <div class="flex-shrink-0">
-                <img
-                        src={avatarImage}
-                        title="avatar de KISSI Yao"
-                        alt="avatar"
-                        class="h-12 w-12 md:h-16 md:w-16 rounded-full bg-white/30"
-                >
+                <a href="/">
+                    <img
+                            src={avatarImage}
+                            title="avatar de KISSI Yao"
+                            alt="avatar"
+                            class="h-20 w-25 md:w-25 md:h-20 "
+                    >
+                </a>
+
             </div>
 
             <!-- Menu Desktop -->
@@ -46,7 +49,7 @@
                         <a
                                 href={item.href}
                                 on:click={(e) => handleClick(e, item.href)}
-                                class="hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
+                                class="hover:text-gray-300 transition-colors duration-200 font-bold font-xl text-"
                         >
                             {item.name}
                         </a>
@@ -60,7 +63,7 @@
                         class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
                         title="Change Language"
                 >
-                    <Languages class="w-6 h-6" />
+                    <Languages class="w-6 h-6 cursor-pointer" />
                 </button>
 
                 <!-- Menu Mobile Button -->
@@ -78,15 +81,16 @@
         {#if menuIsOpen}
             <div
                     bind:this={menuRef}
-                    class="absolute top-full left-0 w-full bg-[#252529] shadow-lg mt-0.5 py-4 md:hidden overflow-hidden"
+                    class="absolute top-full inset-x-0 mx-auto w-[90%] bg-[#17181c]  border-[#27272A]-700 rounded-xl shadow-lg mt-0.5 py-4 md:hidden overflow-hidden"
                     transition:slide={{ duration: 200 }}
             >
                 <div class="container mx-auto px-4">
+                    <p class="py-3 text-sm font-bold">Menu</p>
                     {#each menuItems as item}
                         <a
                                 href={item.href}
                                 on:click={(e) => handleClick(e, item.href)}
-                                class="block py-3 px-4 hover:bg-white/10 transition-colors duration-200"
+                                class="block py-3 w-[80%] hover:bg-white/10 border-b-1 border-gray-700 transition-colors duration-200"
                         >
                             {item.name}
                         </a>
@@ -98,9 +102,10 @@
 </nav>
 
 <style lang="postcss">
-    nav {
-        font-family: 'General Sans', sans-serif;
-    }
 
+nav {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+}
 
 </style>
