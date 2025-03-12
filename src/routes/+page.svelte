@@ -54,10 +54,13 @@
         </div>
 
         <div class="flex justify-center mt-10">
-        <button class="border border-gray-300  text-zinc-300 px-5 py-2 rounded cursor-pointer w- hover:bg-gray-10 ">
-            <span class="btn-ping_dot"></span>
-            Let's Work Together
-        </button>
+            <a href="/contact">
+                <button class="border border-gray-300  text-zinc-300 px-5 py-2 rounded cursor-pointer w- hover:bg-gray-10 ">
+                    <span class="btn-ping_dot"></span>
+                    Let's Work Together
+                </button>
+            </a>
+
         </div>
     </div>
 </header>
@@ -73,15 +76,23 @@ id="about">
     background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-        .btn-ping_dot {
-            position: relative;
-            display: inline-flex;
-            margin-right: 20px;
-            height: .75rem;
-            width: .75rem;
-            border-radius: 9999px;
-            --tw-bg-opacity: 1;
-            background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+
+    .btn-ping_dot {
+        position: relative;
+        display: inline-flex;
+        margin-right: 12px;
+        height: 0.75rem;
+        width: 0.75rem;
+        border-radius: 9999px;
+        background-color: rgb(34 197 94);
+        animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes ping {
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
         }
+    }
 
 </style>

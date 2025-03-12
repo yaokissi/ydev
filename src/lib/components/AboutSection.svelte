@@ -1,91 +1,132 @@
 <script>
+    import { onMount } from "svelte";
 
+    let hasCopied = false;
+
+    function handleCopy() {
+        navigator.clipboard.writeText("yaokissi.pro@gmail.com");
+        hasCopied = true;
+
+        setTimeout(() => {
+            hasCopied = false;
+        }, 2000);
+    }
 </script>
-<div
-        class="
-        w-[100%] mx-auto
-       bg-[#010103]
-        p-10
-        flex
-        justify-around
-        items-center"
-        id="about"
->
-    <div>
-        <div class="flex w-full max-w-6xl gap-6 justify-around items-stretch">
-            <div class="bg-[#0e0e10] p-8 border border-gray-700 rounded-lg flex-1 max-w-[700px]   flex flex-col">
-                <img
-                        src="/src/assets/grid1.png"
-                        alt="avatar"
-                        class="object-contain w-full h-[276px]"
-                />
-                <h2 class="text-white font-bold mt-4">Hi, I'm Yao</h2>
-                <p class="text-white mt-5">
-                    With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic and responsive websites.
-                </p>
-            </div>
-            <div class="bg-[#0e0e10] border border-gray-700 p-8 rounded-lg flex-1 max-w-[700px]  flex flex-col">
-                <img
-                        src="/src/assets/grid2.png"
-                        alt="avatar"
-                        class="object-contain w-full h-[276px]"
-                />
-                <h2 class="text-white font-bold mt-4">Tech Stack</h2>
-                <p class="text-white mt-5">
-                    I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable applications
-                </p>
+<section class="c-space my-20" id="about">
+    <div class="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        <div class="col-span-1 xl:row-span-3">
+            <div class="grid-container">
+                <img src="src/assets/grid1.png" alt="grid-1" class="w-full sm:h-[276px] h-fit object-contain" />
+
+                <div>
+                    <p class="grid-headtext">Hi, I’m Adrian Hajdin</p>
+                    <p class="grid-subtext">
+                        With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
+                        and responsive websites.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class=" border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg ">
-            <img
-                    src="/src/assets/grid3.png"
-                    alt="avatar"
-                    class="object-contain w-full h-[276px]">
-            <h2 class="text-white font-bold mt-4 ">My Passion for Coding</h2>
-            <p class="text-white mt-5 "> I love solving problems and building things through code. Programming isn't just my profession , t's my passion. I enjoy exploring new technologies, and enhancing my skills. </p>
-        </div>
-    </div>
-    <div class=" rightSideAboutSection p-5 flex flex-col justify-between ">
-        <div class="border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
-            <img
-                    alt="globe"
-                 class="object-contain w-full h-[276px]"
-                 src="/src/assets/3d-Earth-Globe.svg"
-            >
-            <h2 class="text-white font-bold mt-4">
-                I'm very flexible with time zone communications & locations
-            </h2>
-            <p class="text-white mt-5">
-                I'm based in Rjieka, Croatia and open to remote work worldwide.
-            </p>
-            <button class="border border-gray-300 text-gray-800 px-5 py-2 rounded cursor w-full hover:bg-gray-100 text-white mt-4">
-                <span class="btn-ping_dot"></span>
-                Contact me
-            </button>
-        </div>
-        <div class=" border border-gray-700 mt-5 bg-[#0e0e10] p-8 rounded-lg">
-            <img src="/src/assets/grid4.png" alt="avatar" class="object-contain w-full h-[276px]">
-            <h2 class="text-white text-center font-bold mt-2">Contact Me </h2>
-            <p class="text-white text-center " >
-                <a href="mailto:yaokissi.pro@gmail.com"> yaokissi.pro@gmail.com </a>
-            </p>
-        </div>
-    </div>
-</div>
+        <div class="col-span-1 xl:row-span-3">
+            <div class="grid-container">
+                <img src="src/assets/grid2.png" alt="grid-2" class="w-full sm:h-[276px] h-fit object-contain" />
 
+                <div>
+                    <p class="grid-headtext">Tech Stack</p>
+                    <p class="grid-subtext">
+                        I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
+                        applications
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-1 xl:row-span-4">
+            <div class="grid-container">
+                <div class="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+                    <img
+                            alt="globe"
+                            class="object-contain w-full h-[276px]"
+                            src="/src/assets/3d-Earth-Globe.svg"
+                    >
+                </div>
+                <div>
+                    <p class="grid-headtext">I’m very flexible with time zone communications & locations</p>
+                    <p class="grid-subtext">I&apos;m based in Rjieka, Croatia and open to remote work worldwide.</p>
+                    <span class="btn-ping_dot"></span>
+                    <button>Contact Me</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="xl:col-span-2 xl:row-span-3">
+            <div class="grid-container">
+                <img src="src/assets/grid3.png" alt="grid-3" class="w-full sm:h-[266px] h-fit object-contain" />
+
+                <div>
+                    <p class="grid-headtext">My Passion for Coding</p>
+                    <p class="grid-subtext">
+                        I love solving problems and building things through code. Programming isn&apos;t just my
+                        profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="xl:col-span-1 xl:row-span-2">
+            <div class="grid-container">
+                <img
+                        src="src/assets/grid4.png"
+                        alt="grid-4"
+                        class="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+                />
+
+                <div class="xl:col-span-1 xl:row-span-2">
+                    <div class="grid-container">
+                        <img src="/src/assets/grid4.png" alt="grid-4" class="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
+                        <div class="space-y-2">
+                            <p class="grid-subtext text-center">Contact me</p>
+                            <div class=""  on:click={handleCopy}>
+                                <img src={hasCopied ? "/src/assets/tick.svg" : "/src/assets/copy.svg"} alt="copy mail" />
+                                <p class="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">yaokissi.pro@gmail.com</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <style>
-
-
+    /*
     .rightSideAboutSection {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
-        height: 100%; /* Changed from h-screen to h-full */
+        height: 100%;  Changed from h-screen to h-full
     }
     .rightSideAboutSection > div:first-child {
-        flex: 7; /* This makes the first div take up roughly 70% of the space */
+        flex: 7;  This makes the first div take up roughly 70% of the space
     }
     .rightSideAboutSection > div:last-child {
-        flex: 3; /* This makes the second div take up roughly 30% of the space */
+        flex: 3;  This makes the second div take up roughly 30% of the space
+    }
+*/
+    .btn-ping_dot {
+        position: relative;
+        display: inline-flex;
+        margin-right: 12px;
+        height: 0.75rem;
+        width: 0.75rem;
+        border-radius: 9999px;
+        background-color: rgb(34 197 94);
+        animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes ping {
+        75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+        }
     }
 </style>
