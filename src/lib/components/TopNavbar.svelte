@@ -50,7 +50,7 @@
                         <a
                                 href={item.href}
                                 on:click={(e) => handleClick(e, item.href)}
-                                class="hover:text-gray-300 transition-colors duration-200 font-bold font-xl text-"
+                                class="hover:text-gray-300 transition-colors duration-200 "
                         >
                             {item.name}
                         </a>
