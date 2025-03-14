@@ -84,6 +84,10 @@
                     touch-action="pan-y"
                     loading="lazy"
                     style="width: 100%; height: 650px;">
+                <div slot="poster" class="loading-poster">
+                    <div class="loading-spinner"></div>
+                    <p class="loading-text">Loading...</p>
+                </div>
             </model-viewer>
         </div>
 
@@ -131,6 +135,37 @@ id="about">
     width: 90%;
     margin-top: 10px;
 }
+    }
+
+    .loading-poster {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        background-color: #010103;
+    }
+
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+    }
+
+    .loading-text {
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 
 
