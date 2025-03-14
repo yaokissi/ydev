@@ -8,9 +8,40 @@
     import { onMount } from "svelte";
 
     let modelSrc = "../models/hacker-room.glb";
+    let modelViewer;
+    let isScrolling = false;
+    let scrollTimeout;
     onMount(() => {
-        import("@google/model-viewer");
+        import("@google/model-viewer")
+
+        // Gestionnaire de défilement
+        function handleScroll() {
+            if (!isScrolling) {
+                isScrolling = true;
+                if (modelViewer) {
+                    modelViewer.setAttribute('camera-controls', 'false');
+                }
+            }
+
+            // Réinitialiser le timeout
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+                if (modelViewer) {
+                    modelViewer.setAttribute('camera-controls', 'true');
+                }
+            }, 150); // Délai avant de réactiver les contrôles
+        }
+
+        // Ajouter l'écouteur d'événement de défilement
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(scrollTimeout);
+        };
     });
+
 </script>
 
 <header>
@@ -42,6 +73,7 @@
         >
             <model-viewer
                     class=""
+                    bind:this={modelViewer}
                     src={modelSrc}
                     alt="My setup 3d model"
                     auto-rotate
@@ -49,6 +81,7 @@
                     camera-orbit="180deg 65deg 105%"
                     field-of-view="30deg"
                     disable-zoom
+                    touch-action="pan-y"
                     loading="lazy"
                     style="width: 100%; height: 650px;">
             </model-viewer>
@@ -69,10 +102,10 @@
 id="about">
 
 </AboutSection>
-<div class="w-full pt-20 pb-50 bg-[#010103]">
+<div class="w-[100%] pt-20 pb-50 bg-[#010103]">
     <div class="w-[90%] mx-auto flex flex-wrap justify-between text-white bg-[#010103] aboutSection">
-        <SocialFeed class="socialfeed" ></SocialFeed>
-        <ProExperiences class="proexperiences"></ProExperiences>
+        <SocialFeed ></SocialFeed>
+        <ProExperiences ></ProExperiences>
     </div>
 </div>
 
@@ -87,7 +120,7 @@ id="about">
 
     @media screen and (max-width: 1024px) {
         .aboutSection{
-            width: 100%;
+            width: 90%;
             margin-top: 10px;
         }
 
@@ -95,7 +128,7 @@ id="about">
     }
     @media screen and (max-width: 480px) {
 .aboutSection {
-    width: 100%;
+    width: 90%;
     margin-top: 10px;
 }
     }
