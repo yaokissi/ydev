@@ -2,6 +2,7 @@
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import AboutSection from "$lib/components/AboutSection.svelte";
     import ProExperiences from "$lib/components/ProExperiences.svelte";
+    import SocialFeed from "$lib/components/SocialFeed.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
     import "../app.css";
     import { onMount } from "svelte";
@@ -68,7 +69,14 @@
 id="about">
 
 </AboutSection>
-<ProExperiences></ProExperiences>
+<div class="w-full pt-20 pb-50 bg-[#010103]">
+    <div class="w-[90%] mx-auto flex flex-wrap justify-between text-white bg-[#010103] aboutSection">
+        <SocialFeed class="socialfeed" ></SocialFeed>
+        <ProExperiences class="proexperiences"></ProExperiences>
+    </div>
+</div>
+
+
 <FooterSection></FooterSection>
 <style>
     @import "tailwindcss";
@@ -76,6 +84,22 @@ id="about">
     background-color: black;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
+    @media screen and (max-width: 1024px) {
+        .aboutSection{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+
+    }
+    @media screen and (max-width: 480px) {
+.aboutSection {
+    width: 100%;
+    margin-top: 10px;
+}
+    }
+
 
     .btn-ping_dot {
         position: relative;

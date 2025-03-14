@@ -42,7 +42,7 @@ const footerLinks = [
                         src="{logo.path}"
                         class="w-7 h-7"
 
-                        alt="logo social media"
+                        alt="logo {footerLinks.path}"
                 />
 
             </a>

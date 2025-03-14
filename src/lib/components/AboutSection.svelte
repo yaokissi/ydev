@@ -74,17 +74,19 @@
         }
     }
 
-    /* Sur écran moyen (tablette) : 2 colonnes */
+
     @media screen and (max-width: 768px) {
         div {
             width: 48%;
+            margin-top: 10px;
         }
     }
 
-    /* Sur petit écran (mobile) : 1 colonne */
+
     @media screen and (max-width: 480px) {
         div {
             width: 100%;
+            margin-top: 10px;
         }
     }
 </style>

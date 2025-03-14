@@ -2,7 +2,7 @@
     import { BriefcaseBusiness } from 'lucide-svelte';
 
     import CvButton from '/src/lib/components/CvButton.svelte';
-    import SocialFeed from '/src/lib/components/SocialFeed.svelte';
+
 
     import llclogo from '/src/assets/llclogo.png';
     import devours_logo from '/src/assets/devours_logo.png';
@@ -46,22 +46,25 @@
     ]
 
 </script>
-    <div class="w-[100%] mx-auto p-10 flex justify-around text-white bg-[#010103]">
-       <SocialFeed></SocialFeed>
-        <div class="bg-[#0e0e10] w-[30%] h-[] p-5 border-1 border-gray-700 rounded-xl">
+
+        <div class="bg-[#0e0e10] w-[30%] p-5 border-1 border-gray-700 rounded-xl workDiv">
             <div class="flex">
                 <BriefcaseBusiness class="text-gray-700"></BriefcaseBusiness>
                 <p class="ml-3">Work</p>
             </div>
             {#each Experiences as experience}
-                <div class="flex justify-between items-center mt-5 border-1 border-gray-700 rounded-xl p-5">
-                    <div class="flex justify-between">
-                        <div class="bg-[#27272A] rounded-full border-1 border-zinc-700 ">
-                            <a href={experience.companyWebsite} target=""> <img src={experience.companyLogo} class="rounded-full" width="45" title="{experience.company} logo" alt="{experience.company} logo" > </a>
+                <div class="flex justify-between items-center mt-5 border border-gray-700 rounded-xl p-5 sm:w-full">
+                    <div class="flex items-center min-w-0">
+
+                        <div class=" bg-[#27272A] rounded-full border border-zinc-700 w-[45px] companyLogoDiv">
+                            <a href="{experience.companyWebsite}" target="_blank">
+                                <img src="{experience.companyLogo}" class="rounded-full" title="{experience.company} logo" width="45" alt="{experience.company} logo">
+                            </a>
                         </div>
-                        <div class="ml-4">
-                            <p>{experience.company}</p>
-                                <p class="text-xs text-gray-200">{experience.role}</p>
+
+                        <div class="ml-4 min-w-0">
+                            <p class="">{experience.company}</p>
+                            <p class="text-xs text-gray-200 ">{experience.role}</p>
                         </div>
                     </div>
                     <p class="text-xs text-gray-500">{experience.startDate} — {experience.endDate}</p>
@@ -69,7 +72,46 @@
             {/each}
          <CvButton class="mt-10"></CvButton>
         </div>
-    </div>
-<style>
 
+<style>
+    @media screen and (max-width: 1024px) {
+       div {
+            width: 100%;
+
+        }
+        .workDiv{
+            margin-top: 30px;
+        }
+        .companyLogoDiv {
+            width: 50px;
+
+            border-radius: 100% ;
+        }
+        .companyLogoDiv img{
+            width: 50px;
+
+            border-radius: 100% ;
+        }
+
+    }
+
+
+    @media screen and (max-width: 480px) {
+        div {
+            width: 100%;
+
+        }
+        .workDiv{
+            margin-top: 30px;
+        }
+.companyLogoDiv {
+            width: 50px;
+    border-radius: 100% ;
+}
+.companyLogoDiv img{
+    width: 50px;
+
+    border-radius: 100% ;
+}
+    }
 </style>

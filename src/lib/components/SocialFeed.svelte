@@ -47,7 +47,7 @@
     ];
 </script>
 
-<section id="social-feed" class="py-16 bg-[#0e0e10] border-1 border-gray-700 rounded-xl text-white">
+<section id="social-feed" class="py-16 w-[65%] bg-[#0e0e10] border-1 border-gray-700 rounded-xl text-white">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-heading font-bold mb-8 text-center">
             <span class="text-blue-400">Socials</span>  Medias
@@ -97,5 +97,18 @@
 </section>
 
 <style>
-    /* Vous pouvez ajouter des styles spécifiques ici si nécessaire */
+    @media screen and (max-width: 1024px) {
+        section {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+
+    @media screen and (max-width: 480px) {
+        section {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
 </style>
