@@ -1,18 +1,25 @@
 <script lang="ts">
-    import { Languages, LayoutGrid } from 'lucide-svelte';
+    import { Languages, LayoutGrid, Moon, Sun } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
 
     const menuItems = [
         { name: "Home", href: "/" },
-        { name: "About", href: "#about" },
+        { name: "About", href: "/#about" },
         { name: "Projects", href: "/projects" },
         { name: "Contact", href: "/contact" },
     ];
-    console.log(menuItems);
 
     let avatarImage = '/src/assets/avatar1.png';
     let menuIsOpen = false;
-    let menuRef: HTMLDivElement | null = null; // Référence pour la transition
+    // Réf pour la transition
+    let menuRef: HTMLDivElement | null = null;
+
+    let isDarKMode = false;
+
+    function toggleDarkMode() {
+        isDarKMode = !isDarKMode;
+        document.body.classList.toggle('dark');
+    }
 
     function handleClick(e: Event, href: string) {
         if (href.startsWith('#')) {
@@ -22,7 +29,8 @@
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        menuIsOpen = false; // Ferme le menu après un clic
+        // Ferme le menu après un clic
+        menuIsOpen = false;
     }
 </script>
 
@@ -64,7 +72,10 @@
                         class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
                         title="Change Language"
                 >
-                    <Languages class="w-6 h-6 cursor-pointer" />
+                   <!-- <Languages class="w-6 h-6 cursor-pointer" /> -->
+                    <Moon class="w-7 h-7 cursor-pointer"></Moon>
+                    <Sun class="w-7 h-7 cursor-pointer"></Sun>
+
                 </button>
 
                 <!-- Menu Mobile Button -->
