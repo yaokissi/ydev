@@ -1,18 +1,30 @@
 <script lang="ts">
-    import { Languages, LayoutGrid } from 'lucide-svelte';
+    import { Languages, LayoutGrid, Moon, Sun } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
+    import { theme } from '$lib/stores/theme';
+
+
 
     const menuItems = [
         { name: "Home", href: "/" },
-        { name: "About", href: "#about" },
+        { name: "About", href: "/#about" },
         { name: "Projects", href: "/projects" },
         { name: "Contact", href: "/contact" },
     ];
-    console.log(menuItems);
 
     let avatarImage = '/src/assets/avatar1.png';
     let menuIsOpen = false;
-    let menuRef: HTMLDivElement | null = null; // Référence pour la transition
+    // Réf pour la transition
+    let menuRef: HTMLDivElement | null = null;
+
+
+    // Utiliser le store
+    let currentTheme: string;
+    theme.subscribe(value => currentTheme = value);
+
+    function toggleDarkMode() {
+        theme.set(currentTheme === "dark" ? "light" : "dark");
+    }
 
     function handleClick(e: Event, href: string) {
         if (href.startsWith('#')) {
@@ -22,11 +34,12 @@
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-        menuIsOpen = false; // Ferme le menu après un clic
+        // Ferme le menu après un clic
+        menuIsOpen = false;
     }
 </script>
 
-<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#252529] to-black text-white py-4">
+<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
@@ -63,8 +76,15 @@
                 <button
                         class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
                         title="Change Language"
+                        on:click={toggleDarkMode}
                 >
-                    <Languages class="w-6 h-6 cursor-pointer" />
+                   <!-- <Languages class="w-6 h-6 cursor-pointer" /> -->
+                    {#if currentTheme === "dark"}
+                    <Moon class="w-7 h-7 cursor-pointer"></Moon>
+                    {:else}
+                    <Sun class="w-7 h-7 cursor-pointer"></Sun>
+                    {/if}
+
                 </button>
 
                 <!-- Menu Mobile Button -->

@@ -1,7 +1,7 @@
 <script>
 
 </script>
-<section class=" pt-20 bg-[#010103]">
+<section class=" pt-20 bg-[#010103]" id="about">
     <article class="flex flex-wrap justify-between ml-auto mr-auto w-[90%]">
         <div class="bg-[#0e0e10] w-[30%] p-8 border border-gray-700 rounded-lg flex flex-col min-h-[350px]
                 lg:col-span-1">
@@ -28,10 +28,12 @@
             <p class="text-white mt-5 text-center">
                 I'm based in Rijeka, Croatia and open to remote work worldwide.
             </p>
-            <button class="border border-gray-300 text-gray-800 px-5 py-2 rounded cursor w-full sm:w-auto hover:bg-gray-100 text-white mt-4">
-                <span class="btn-ping_dot"></span>
-                Contact me
-            </button>
+            <a href="/contact">
+                <button class="border border-gray-300 text-gray-800 px-5 py-2 rounded w-full sm:w-auto cursor-pointer text-white mt-4">
+                    <span class="btn-ping_dot"></span>
+                    Contact me
+                </button>
+            </a>
         </div>
     </article>
 
