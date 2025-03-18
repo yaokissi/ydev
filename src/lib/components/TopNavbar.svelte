@@ -24,30 +24,11 @@
         menuIsOpen = false; // Ferme le menu après un clic
     }
 
-    function toggleTheme() {
-        if (typeof document !== 'undefined') {
-            const htmlElement = document.documentElement;
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            }
-        }
-    }
 
-    if (typeof document !== 'undefined') {
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }
 
 
 </script>
-
+<div class="">
 <nav class="fixed top-0 left-0 w-full z-50 bg-neutral-900 dark:bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
@@ -82,12 +63,15 @@
 
             <!-- Icônes à droite -->
             <div class="flex items-center space-x-4">
-                <button class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200" title="Change Theme" on:click={toggleTheme}>
-                    {#if document.documentElement.classList.contains('dark')}
+                <button class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
+                        title="Change Theme"
+
+                >
+
                         <Sun class="w-6 h-6 cursor-pointer"/>
-                    {:else}
+
                         <Moon class="w-6 h-6 cursor-pointer"/>
-                    {/if}
+
                 </button>
 
                 <!-- Menu Mobile Button -->
@@ -124,7 +108,7 @@
         {/if}
     </div>
 </nav>
-
+</div>
 <style>
 
 nav {
