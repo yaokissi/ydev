@@ -23,13 +23,17 @@
         }
         menuIsOpen = false; // Ferme le menu après un clic
     }
+const darkMode = false;
+    const setDarkMode = false;
 
-
+function toggleTheme() {
+   setDarkMode(!darkMode);
+}
 
 
 </script>
 <div class="">
-<nav class="fixed top-0 left-0 w-full z-50 bg-neutral-900 dark:bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
+<nav class="fixed top-0 left-0 w-full z-50  dark:bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
