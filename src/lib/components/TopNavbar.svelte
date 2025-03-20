@@ -1,6 +1,7 @@
 <script lang="ts">
-    import { Sun,Moon, LayoutGrid } from 'lucide-svelte';
+    import { Sun,Moon, LayoutGrid,  CircleX  } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
+    import { theme } from '../stores/theme';
 
     const menuItems = [
         { name: "Home", href: "/" },
@@ -23,17 +24,15 @@
         }
         menuIsOpen = false; // Ferme le menu après un clic
     }
-const darkMode = false;
-    const setDarkMode = false;
 
-function toggleTheme() {
-   setDarkMode(!darkMode);
-}
+    function toggleTheme() {
+        theme.update(currentTheme => currentTheme === 'dark' ? 'light' : 'dark');
+    }
 
 
 </script>
 <div class="">
-<nav class="fixed top-0 left-0 w-full z-50  dark:bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
+<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
@@ -69,12 +68,14 @@ function toggleTheme() {
             <div class="flex items-center space-x-4">
                 <button class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
                         title="Change Theme"
+                        on:click={toggleTheme}
 
                 >
-
+                    {#if $theme === 'dark'}
                         <Sun class="w-6 h-6 cursor-pointer"/>
-
+                    {:else}
                         <Moon class="w-6 h-6 cursor-pointer"/>
+                    {/if}
 
                 </button>
 
@@ -97,7 +98,16 @@ function toggleTheme() {
                     transition:slide={{ duration: 200 }}
             >
                 <div class="container mx-auto px-4">
-                    <p class="py-3 text-sm font-bold text-zinc-300 ">Menu</p>
+                    <div class="flex justify-between items-center">
+                        <p class="py-3 text-sm font-bold text-zinc-300 ">Menu</p>
+                        <button
+                                class="p-2 hover:bg-white/10 rounded-full transition-colors duration-200"
+                                on:click={() => menuIsOpen = false}
+                                aria-label="Close menu"
+                                >
+                            <CircleX class="w-6 h-6 cursor-pointer"/>
+                        </button>
+                    </div>
                     {#each menuItems as item}
                         <a
                                 href={item.href}
@@ -115,11 +125,7 @@ function toggleTheme() {
 </div>
 <style>
 
-nav {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-
-}
 
 
 </style>
