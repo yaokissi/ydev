@@ -47,24 +47,24 @@
 
 </script>
 
-        <div class="bg-[#0e0e10] w-[30%] p-5 border-1 border-gray-700 rounded-xl workDiv">
+        <div class=" bg-[var(--background-proXp-div)] w-[30%] p-5 border-1 border-gray-700 rounded-xl workDiv">
             <div class="flex">
                 <BriefcaseBusiness class="text-gray-700"></BriefcaseBusiness>
-                <p class="ml-3">Work</p>
+                <p class="ml-3 text-[var(--text-primary)]">Work</p>
             </div>
             {#each Experiences as experience}
                 <div class="flex justify-between items-center mt-5 border border-gray-700 rounded-xl p-5 sm:w-full">
                     <div class="flex items-center min-w-0">
 
-                        <div class=" bg-[#27272A] rounded-full border border-zinc-700 w-[45px] companyLogoDiv">
+                        <div class=" bg-[var(--company-bg)] rounded-full border border-zinc-700 w-[45px] companyLogoDiv">
                             <a href="{experience.companyWebsite}" target="_blank">
                                 <img src="{experience.companyLogo}" class="rounded-full" title="{experience.company} logo" width="45" alt="{experience.company} logo">
                             </a>
                         </div>
 
                         <div class="ml-4 min-w-0">
-                            <p class="">{experience.company}</p>
-                            <p class="text-xs text-gray-200 ">{experience.role}</p>
+                            <p class="text-[var(--text-primary)] ">{experience.company}</p>
+                            <p class="text-[var(--text-primary)] text-xs text-gray-200 ">{experience.role}</p>
                         </div>
                     </div>
                     <p class="text-xs text-gray-500">{experience.startDate} — {experience.endDate}</p>

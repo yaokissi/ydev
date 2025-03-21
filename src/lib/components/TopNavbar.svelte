@@ -31,32 +31,29 @@
 
 
 </script>
-<div class="">
-<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-[#252529] to-black text-white py-4 ">
+<div class=""> <!-- bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)]-->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[var(--background)] text-[var(--text-primary)] py-4 transition-colors duration-300">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
-            <div class="flex-shrink-0 ">
+            <div class="flex-shrink-0">
                 <a href="/">
                     <img
                             src={avatarImage}
-                            title="avatar de KISSI Yao"
-                            alt="avatar"
-                            class="h-20 w-25 md:w-25 md:h-20 "
+                            class="h-20 w-25 md:w-25 md:h-20"
+                            alt="Avatar"
                     >
-                    <p class="text-zinc-300 text-xs text-center">Ydev</p>
+                    <p class="text-[var(--text-secondary)] text-xs text-center">Ydev</p>
                 </a>
-
             </div>
 
             <!-- Menu Desktop -->
-            <ul class="hidden md:!flex items-center text-white space-x-8">
+            <ul class="hidden md:!flex items-center space-x-8">
                 {#each menuItems as item}
                     <li>
                         <a
                                 href={item.href}
-                                on:click={(e) => handleClick(e, item.href)}
-                                class="hover:text-gray-300 transition-colors duration-200 "
+                                class="hover:text-[var(--text-secondary)] transition-colors duration-200"
                         >
                             {item.name}
                         </a>
@@ -94,7 +91,7 @@
         {#if menuIsOpen}
             <div
                     bind:this={menuRef}
-                    class="absolute top-full inset-x-0 mx-auto w-[90%] bg-[#17181c]  border-[#27272A]-700 rounded-xl shadow-lg mt-0.5 py-4 md:hidden overflow-hidden"
+                    class="absolute top-full inset-x-0 mx-auto w-[90%] bg-[var(--menu-bg)] border-[var(--text-secondary)] rounded-xl shadow-lg mt-0.5 py-4 md:hidden overflow-hidden"
                     transition:slide={{ duration: 200 }}
             >
                 <div class="container mx-auto px-4">

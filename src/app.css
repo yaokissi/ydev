@@ -8,26 +8,26 @@ html {
     scroll-padding-top: 80px;
 }
 
+
+
 :root {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-     line-height: 1.5;
-     font-weight: 400;
+    --background-gradient-from: #f8fafc;  /* Light mode */
+    --background-gradient-to: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --background: #ffffff;
+    --background-proXp-div: #f1f5f9;
+    --company-bg: black;
+    --menu-bg: #f1f5f9;
+}
 
-     color-scheme: light dark;
-
-     /* Light mode colors */
-     --bg-primary: #ffffff;
-     --text-primary: #213547;
-     --nav-bg-from: #f8f9fa;
-     --nav-bg-to: #e9ecef;
-     --hover-bg: rgba(0, 0, 0, 0.1);
- }
-
-/* Dark mode */
-:root.dark {
-    --bg-primary: #242424;
-    --text-primary: rgba(255, 255, 255, 0.87);
-    --nav-bg-from: #252529;
-    --nav-bg-to: #000000;
-    --hover-bg: rgba(255, 255, 255, 0.1);
+.dark {
+    --background-gradient-from: #252529;  /* Dark mode */
+    --background-gradient-to: black;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --background: #010103;
+    --background-proXp-div: #0e0e10;
+    --company-bg: #27272A;
+    --menu-bg: #17181c;
 }

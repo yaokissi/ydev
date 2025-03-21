@@ -20,14 +20,15 @@ const footerLinks = [
     { name: "Contact", href: "/contact" },
 ];
 </script>
-<hr class="text-gray-700">
+<hr class="text-gray-700 ">
 <div class="
             pt-10
             p-10
             flex
             justify-around
             flex-wrap
-            bg-black
+            bg-[var(--background)]
+            text-[var(--text-primary)]
 
             ">
     <div>
@@ -36,7 +37,7 @@ const footerLinks = [
             <a
                     href={logo.href}
                     target="_blank"
-                    class="mr-5 "
+                    class="mr-5 text-[var(--text-primary)]"
             >
                 <img
                         src="{logo.path}"
@@ -51,14 +52,14 @@ const footerLinks = [
         <ul class="flex justify-center mt-10 justify-evenly">
             {#each footerLinks as link}
                 <li class="mr-10">
-                    <a href={link.href} class="text-white hover:text-gray-300 transition-colors">
+                    <a href={link.href} class="text-white text-[var(--text-primary)] hover:text-gray-300 transition-colors">
                         {link.name}
                     </a>
                 </li>
             {/each}
         </ul>
     </div>
-    <div class="text-white flex justify-between items-center mt-10 md:mt-0 ">
+    <div class="text-white text-[var(--text-primary)] flex justify-between items-center mt-10 md:mt-0 ">
         <Copyright class="w-5"></Copyright> <p class="ml-3">2025 Yao KISSI. All rights reserved.</p>
     </div>
 

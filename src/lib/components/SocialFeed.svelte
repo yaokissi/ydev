@@ -47,29 +47,29 @@
     ];
 </script>
 
-<section id="social-feed" class="py-16 w-[65%] bg-[#0e0e10] border-1 border-gray-700 rounded-xl text-white">
+<section id="social-feed" class="py-16 w-[65%] bg-[var(--background-proXp-div)] border-1 border-gray-700 rounded-xl text-white">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-heading font-bold mb-8 text-center">
+        <h2 class="text-[var(--text-primary)] text-3xl font-heading font-bold mb-8 text-center">
             <span class="text-blue-400">Socials</span>  Medias
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {#each socialUpdates as update}
-                <div class="bg-[#010103] rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-all">
+                <div class="bg-[var(--background-proXp-div)] rounded-xl p-5 border border-gray-800 hover:border-gray-700 transition-all">
                     <div class="flex items-center mb-3">
-                        <div class="w-10 h-10 flex items-center justify-center bg-[#27272A] rounded-full">
+                        <div class="w-10 h-10 flex items-center justify-center bg-[var(--company-bg)] rounded-full">
                             <img src={update.icon} alt="icon" class="w-6 h-6" />
                         </div>
                         <div class="ml-3">
-                            <p class="font-medium">{update.username}</p>
-                            <p class="text-sm text-gray-400">{update.date}</p>
+                            <p class="text-[var(--text-primary)] font-medium">{update.username}</p>
+                            <p class="text-[var(--text-primary)] text-sm text-gray-400">{update.date}</p>
                         </div>
                     </div>
 
-                    <p class="mb-4">{update.content}</p>
+                    <p class=" text-[var(--text-primary)] mb-4">{update.content}</p>
 
                     <a href={update.link} target="_blank" rel="noopener noreferrer"
-                       class="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center">
+                       class="text-[var(--text-primary)] text-blue-400 hover:text-blue-300 text-sm inline-flex items-center">
                         Voir sur {update.platform}
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />

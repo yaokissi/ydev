@@ -4,7 +4,7 @@
 </script>
 
 <TopNavbar />
-<main class="min-h-screen bg-[#0e0e10] text-white relative pt-20">
+<main class="min-h-screen bg-[var(--background)] text-white relative pt-20 mt-20">
     <div class="absolute inset-0 top-20 z-0">
         <img
                 src="../src/assets/terminal.png"

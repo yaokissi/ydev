@@ -48,14 +48,15 @@
     <TopNavbar></TopNavbar>
 
     <div class="
-                   bg-[#010103]
+                   bg-[var(--background)]
          "
     >
-        <p class="text-white text-center text-3xl pt-35 ">Hi, I'm Yao The big </p>
+        <p class=" text-[var(--text-primary)] text-white text-center text-3xl pt-35 ">Hi, I'm Yao The big </p>
         <h1
                 class="
            w-[100%]
            ml-10
+           text-[var(--text-primary)]
            font-bold
            text-xl
             mr-auto
@@ -93,7 +94,7 @@
 
         <div class="flex justify-center mt-10">
             <a href="/contact">
-                <button class="border border-gray-300  text-zinc-300 px-5 py-2 rounded cursor-pointer w- hover:bg-gray-10 ">
+                <button class="border border-gray-300 text-[var(--text-primary)] hover:bg-[var(--background-gradient-from)] transition-colors text-zinc-300 px-5 py-2 rounded cursor-pointer w- hover:bg-gray-10 ">
                     <span class="btn-ping_dot"></span>
                     Let's Work Together
                 </button>
@@ -106,10 +107,11 @@
 id="about">
 
 </AboutSection>
-<div class="w-[100%] pt-20 pb-50 bg-[#010103]">
-    <div class="w-[90%] mx-auto flex flex-wrap justify-between text-white bg-[#010103] aboutSection">
-        <SocialFeed ></SocialFeed>
+<div class="w-[100%] pt-20 pb-50 bg-[var(--background)]">
+    <div class="w-[90%] mx-auto flex flex-wrap justify-between text-white bg-[var(--background)] aboutSection">
         <ProExperiences ></ProExperiences>
+        <SocialFeed ></SocialFeed>
+
     </div>
 </div>
 
@@ -118,7 +120,7 @@ id="about">
 <style>
     @import "tailwindcss";
 * {
-    background-color: black;
+
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
