@@ -2,6 +2,8 @@
     import { Sun,Moon, LayoutGrid,  CircleX  } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
     import { theme } from '../stores/theme';
+    import { isNavbarVisible } from '../stores/navbar';
+
 
     const menuItems = [
         { name: "Home", href: "/" },
@@ -32,7 +34,8 @@
 
 </script>
 <div class=""> <!-- bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)]-->
-<nav class="fixed top-0 left-0 w-full z-50 bg-[var(--background)] text-[var(--text-primary)] py-4 transition-colors duration-300">
+<nav class="fixed top-0 left-0 w-full z-50 bg-[var(--background)]
+text-[var(--text-primary)] py-4 transition-colors duration-300">
     <div class="container mx-auto px-4">
         <div class="flex justify-between items-center">
             <!-- Logo/Avatar -->
@@ -121,7 +124,6 @@
 </nav>
 </div>
 <style>
-
 
 
 

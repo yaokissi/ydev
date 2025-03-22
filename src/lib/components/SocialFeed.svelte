@@ -2,46 +2,48 @@
 
 
     import Twitter from '/src/twitter.png';
+    import Thread from '/src/threads.png';
     import Github from '/src/github.png';
     import Linkedin from '/src/linkedin.png';
 
 
     const socialUpdates = [
         {
-            platform: 'Twitter',
-            icon: Twitter,
-            username: '@votreusername',
-            date: '2 juin 2024',
-            content: 'Je viens de lancer mon nouveau site portfolio avec Svelte et Tailwind CSS! #webdev #svelte',
-            link: 'https://twitter.com/votreusername/status/123456789',
+            platform: 'Thread',
+            icon: Thread,
+            username: 'bigyaos',
+            date: '26 01 2025',
+            content: 'Sofware Engineering is the only career, where ...',
+            link: 'https://www.threads.net/@bigyaos/post/DFSUAG2oH7k?xmt=AQGz-_Dz_IsIapMRXgsEovaHcDymObmgr6GLv2vdR4E37g',
             engagement: {
-                likes: 42,
-                retweets: 12,
-                comments: 5
+                likes: 4000,
+                retweets: 168,
+                comments: 91
             }
         },
         {
             platform: 'LinkedIn',
             icon: Linkedin,
-            username: 'Votre Nom',
-            date: '28 mai 2024',
-            content: 'Heureux d\'annoncer que je commence un nouveau projet passionnant avec des technologies modernes...',
-            link: 'https://linkedin.com/in/votrenom/posts/123456',
+            username: 'KISSI Yao',
+            date: '27 January 2025',
+            content: 'Ravi de partager avec vous mon premier projet avec Three.js, une librairie JavaScript qui permet de créer des expériences 3D immersives directement dans le navigateur',
+            link: 'https://www.linkedin.com/posts/yao-kissi_ravi-de-partager-avec-vous-mon-premier-projet-activity-7286891705021157377-Tu0A?utm_source=share&utm_medium=member_desktop&rcm=ACoAACgj62wB4KChK93XmFu89qBPIgrFp8mjPZA',
             engagement: {
-                likes: 78,
-                comments: 15
+                likes: 27,
+                reposts: 5,
+                comments: 2
             }
         },
         {
             platform: 'GitHub',
             icon: Github,
-            username: 'votreusername',
-            date: '15 mai 2024',
-            content: 'J\'ai publié un nouveau repo: "svelte-portfolio-template" - un template moderne pour les portfolios de développeurs',
-            link: 'https://github.com/votreusername/svelte-portfolio-template',
+            username: 'yaokissi',
+            date: ' mai 2024',
+            content: 'I work on a new project, a portfolio template for Svelte',
+            link: 'https://github.com/yaokissi/ydev',
             engagement: {
-                stars: 24,
-                forks: 8
+                stars: 0,
+                forks: 0
             }
         }
     ];
@@ -69,20 +71,22 @@
                     <p class=" text-[var(--text-primary)] mb-4">{update.content}</p>
 
                     <a href={update.link} target="_blank" rel="noopener noreferrer"
-                       class="text-[var(--text-primary)] text-blue-400 hover:text-blue-300 text-sm inline-flex items-center">
-                        Voir sur {update.platform}
+                       class="text-blue-400 text-sm inline-flex items-center">
+                        See More
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                     </a>
 
                     <div class="mt-4 pt-3 border-t border-gray-800 flex gap-4">
-                        {#if update.platform === 'Twitter'}
+                        {#if update.platform === 'Threads'}
                             <span class="text-sm text-gray-400">{update.engagement.likes} likes</span>
                             <span class="text-sm text-gray-400">{update.engagement.retweets} retweets</span>
                         {:else if update.platform === 'LinkedIn'}
                             <span class="text-sm text-gray-400">{update.engagement.likes} réactions</span>
                             <span class="text-sm text-gray-400">{update.engagement.comments} commentaires</span>
+                            <span class="text-sm text-gray-400">{update.engagement.reposts} reposts</span>
+
                         {:else if update.platform === 'GitHub'}
                             <span class="text-sm text-gray-400">{update.engagement.stars} étoiles</span>
                             <span class="text-sm text-gray-400">{update.engagement.forks} forks</span>
