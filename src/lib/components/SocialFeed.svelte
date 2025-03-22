@@ -1,7 +1,4 @@
 <script>
-
-
-    import Twitter from '/src/twitter.png';
     import Threads from '/src/threads.png';
     import Github from '/src/github.png';
     import Linkedin from '/src/linkedin.png';

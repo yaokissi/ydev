@@ -1,13 +1,14 @@
 <script>
     import TopNavbar from "$lib/components/TopNavbar.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
+    import terminal from "/src/assets/terminal.png";
 </script>
 
 <TopNavbar />
 <main class="min-h-screen bg-[var(--background)] text-white relative pt-20 mt-20">
     <div class="absolute inset-0 top-20 z-0">
         <img
-                src="../src/assets/terminal.png"
+                src="{terminal}"
                 alt="terminal background"
                 class="w-full h-[calc(100vh-5rem)] object-contain "
         />
@@ -57,10 +58,16 @@
 
                 <button
                         type="submit"
-                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#1a1a1c]"
+                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 pointer-events-none focus:ring-offset-2 focus:ring-offset-[#1a1a1c]"
                 >
                     Send Message
                 </button>
+                <p class="text-red-400">Sorry, I'm actually working to make contact form working.
+                Contact me there please : <a href="mailto:yaokissi.pro@gmail.com" class="text-blue-400 hover:underline">yaokissi.pro@gmail.com</a>
+                </p>
+
+
+
             </form>
         </div>
     </div>

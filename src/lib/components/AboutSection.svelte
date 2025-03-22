@@ -1,11 +1,15 @@
 <script>
-
+import grid1 from '/src/assets/grid1nvC.png';
+import grid21 from '/src/assets/grid21.png';
+import globe from '/src/assets/3d-Earth-Globe.svg';
+import grid3 from '/src/assets/grid3.png';
+import grid4 from '/src/assets/grid4.png';
 </script>
 <section class=" pt-20 bg-[var(--background)]" id="about">
     <article class="flex flex-wrap justify-between ml-auto mr-auto w-[90%]">
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[30%]  text-[var(--text-primary)] p-8 border border-gray-700 rounded-lg flex flex-col min-h-[350px]
                 lg:col-span-1">
-            <img src="/src/assets/grid1nvC.png" alt="avatar" class="object-contain w-full h-[276px]" />
+            <img src="{grid1}" alt="avatar" class="object-contain w-full h-[276px]" />
             <h2 class="text-white text-[var(--text-primary)] font-bold mt-4">Hi, I'm Yao</h2>
             <p class="text-white text-[var(--text-primary)] mt-5">
                 I am passionate about frontend development, while also capable of handling backend tasks when needed. I continuously improve my skills by working on projects and exploring new opportunities in the field. 🚀
@@ -13,7 +17,7 @@
         </div>
 
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[30%] border border-gray-700 p-8 rounded-lg flex flex-col min-h-[350px]">
-            <img src="/src/assets/grid21.png" alt="avatar" class="object-contain w-full h-[276px]" />
+            <img src="{grid21}" alt="avatar" class="object-contain w-full h-[276px]" />
             <h2 class="text-white text-[var(--text-primary)] font-bold mt-4">Tech Stack</h2>
             <p class="text-white mt-5 text-[var(--text-primary)]">
                 I use a variety of languages, frameworks, and tools that allow me to build beautiful and robust applications.
@@ -21,7 +25,7 @@
         </div>
 <!-- bg-[#0e0e10] -->
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[30%] border border-gray-700 p-8 rounded-lg min-h-[350px]">
-            <img alt="globe" class="object-contain w-full h-[276px]" src="/src/assets/3d-Earth-Globe.svg" />
+            <img alt="globe" class="object-contain w-full h-[276px]" src="{globe}" />
             <h2 class="text-white text-[var(--text-primary)] font-bold mt-4 text-center">
                 I'm very flexible with time zone communications & locations
             </h2>
@@ -40,7 +44,7 @@
     <article class="flex flex-wrap justify-between ml-auto mr-auto mt-10 w-[90%]">
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[calc(65%)] border border-gray-700 p-8 rounded-lg min-h-[350px]
                 lg:col-span-2">
-            <img src="/src/assets/grid3.png" alt="avatar" class="object-contain w-full h-[276px]" />
+            <img src="{grid3}" alt="avatar" class="object-contain w-full h-[276px]" />
             <h2 class="text-white font-bold mt-4 text-[var(--text-primary)]">My Passion for Coding</h2>
             <p class="text-white mt-5 text-[var(--text-primary)] ">
                 I love solving problems and building things through code. Programming isn't just my profession, it's my passion.
@@ -49,7 +53,7 @@
         </div>
 
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[30%] border border-gray-700 p-8 rounded-lg min-h-[350px]">
-            <img src="/src/assets/grid4.png" alt="avatar" class="object-contain w-full h-[276px]" />
+            <img src="{grid4}" alt="avatar" class="object-contain w-full h-[276px]" />
             <h2 class="text-white text-[var(--text-primary)] text-center font-bold mt-2">Contact Me</h2>
             <p class="text-white text-[var(--text-primary)] text-center">
                 <a href="mailto:yaokissi.pro@gmail.com" class="text-blue-400 text-[var(--text-primary)] hover:underline">yaokissi.pro@gmail.com</a>

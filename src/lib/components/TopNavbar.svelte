@@ -2,6 +2,7 @@
     import { Sun,Moon, LayoutGrid,  CircleX  } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
     import { theme } from '../stores/theme';
+    import avatarImage from '/src/assets/avatar1.png';
     import { isNavbarVisible } from '../stores/navbar';
 
 
@@ -12,7 +13,7 @@
         { name: "Contact", href: "/contact" },
     ];
 
-    let avatarImage = '/src/assets/avatar1.png';
+
     let menuIsOpen = false;
     let menuRef: HTMLDivElement | null = null; // Référence pour la transition
 
