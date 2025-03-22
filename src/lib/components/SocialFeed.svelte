@@ -2,15 +2,15 @@
 
 
     import Twitter from '/src/twitter.png';
-    import Thread from '/src/threads.png';
+    import Threads from '/src/threads.png';
     import Github from '/src/github.png';
     import Linkedin from '/src/linkedin.png';
 
 
     const socialUpdates = [
         {
-            platform: 'Thread',
-            icon: Thread,
+            platform: 'Threads',
+            icon: Threads,
             username: 'bigyaos',
             date: '26 01 2025',
             content: 'Sofware Engineering is the only career, where ...',
@@ -82,6 +82,7 @@
                         {#if update.platform === 'Threads'}
                             <span class="text-sm text-gray-400">{update.engagement.likes} likes</span>
                             <span class="text-sm text-gray-400">{update.engagement.retweets} retweets</span>
+                            <span class="text-sm text-gray-400">{update.engagement.comments} comments</span>
                         {:else if update.platform === 'LinkedIn'}
                             <span class="text-sm text-gray-400">{update.engagement.likes} réactions</span>
                             <span class="text-sm text-gray-400">{update.engagement.comments} commentaires</span>
