@@ -19,7 +19,7 @@
             <h1 class="text-4xl font-bold text-center mb-2">Let's talk</h1>
             <p class="text-gray-300 text-center mb-8">I commit to responding to your message within a maximum delay of 2 hours.</p>
 
-            <form method="POST" action="/contact" class="space-y-6">
+            <form method="POST" action="https://formspree.io/f/mqapqpna" class="space-y-6">
                 <div class="space-y-2">
                     <label class="block text-sm font-medium text-gray-300">
                         Name
@@ -28,6 +28,7 @@
                                 type="text"
                                 class="mt-1 block w-full p-3 bg-[#27272A] border border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                 placeholder="Your name"
+                                required
                         />
                     </label>
                 </div>
@@ -40,6 +41,7 @@
                                 type="email"
                                 class="mt-1 block w-full p-3 bg-[#27272A] border border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                 placeholder="your.email@example.com"
+                                required
                         />
                     </label>
                 </div>
@@ -52,20 +54,25 @@
                                 rows="4"
                                 class="mt-1 block w-full p-3 bg-[#27272A] border border-gray-700 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                                 placeholder="Your message here..."
+                                required
                         ></textarea>
                     </label>
                 </div>
 
                 <button
                         type="submit"
-                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-blue-700 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 pointer-events-none focus:ring-offset-2 focus:ring-offset-[#1a1a1c]"
+                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-medium
+                        hover:bg-blue-700 transition-colors duration-200
+                        ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500
+                         focus:ring-offset-2 focus:ring-offset-[#1a1a1c]"
                 >
                     Send Message
                 </button>
+                <!--
                 <p class="text-red-400">Sorry, I'm actually working to make contact form working.
                 Contact me there please : <a href="mailto:yaokissi.pro@gmail.com" class="text-blue-400 hover:underline">yaokissi.pro@gmail.com</a>
                 </p>
-
+                -->
 
 
             </form>
