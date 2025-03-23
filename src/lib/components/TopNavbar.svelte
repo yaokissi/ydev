@@ -45,7 +45,7 @@ text-[var(--text-primary)] py-4 transition-colors duration-300">
                     <img
                             src={avatarImage}
                             class="h-20 w-25 md:w-25 md:h-20"
-                            alt="Avatar"
+                            alt="Avatar yao kissi"
                     >
                     <p class="text-[var(--text-secondary)] text-xs text-center">Ydev</p>
                 </a>
