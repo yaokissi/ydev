@@ -12,7 +12,7 @@ import grid4 from '/src/assets/grid4.png';
         <div class="bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)] w-[30%]  text-[var(--text-primary)] p-8 border border-gray-700 rounded-lg flex flex-col min-h-[350px]
                 lg:col-span-1">
             <img src="{grid1}" alt="kissi yao about section grid" class="object-contain w-full h-[276px]" />
-            <h2 class="text-white text-[var(--text-primary)] font-bold mt-4">Hi, I'm Yao</h2>
+            <h2 class="text-white text-[var(--text-primary)] font-bold mt-4">Hi, I'm Yao KISSI</h2>
             <p class="text-white text-[var(--text-primary)] mt-5">
                 I am passionate about frontend development, while also capable of handling backend tasks when needed. I continuously improve my skills by working on projects and exploring new opportunities in the field. 🚀
             </p>

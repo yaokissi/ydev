@@ -1,10 +1,9 @@
 <script>
-    import TopNavbar from "$lib/components/TopNavbar.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
     import terminal from "/src/assets/terminal.png";
 </script>
 
-<TopNavbar />
+
 <main class="min-h-screen bg-[var(--background)] text-white relative pt-20 mt-20">
     <div class="absolute inset-0 top-20 z-0">
         <img

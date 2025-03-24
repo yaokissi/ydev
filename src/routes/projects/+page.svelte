@@ -1,7 +1,6 @@
 <script>
     import { Link } from 'lucide-svelte';
     import {onMount} from "svelte";
-    import TopNavbar from "$lib/components/TopNavbar.svelte";
     import FooterSection from "$lib/components/FooterSection.svelte";
 
 
@@ -90,7 +89,7 @@
 
 </script>
 
-<TopNavbar></TopNavbar>
+
 <main class="bg-[var(--background-proXp-div)] h-[100vh] h-full pt-40 pb-20 text-[var(--text-primary)] text-white ">
     <section class="ml-auto mr-auto w-[90%]" >
         <article>

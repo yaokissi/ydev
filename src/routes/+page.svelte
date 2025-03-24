@@ -6,6 +6,9 @@
     import FooterSection from "$lib/components/FooterSection.svelte";
     import "../app.css";
     import { onMount } from "svelte";
+    import { afterUpdate } from 'svelte';
+
+
 
     let modelSrc = "../models/hacker-room.glb";
     let modelViewer;
@@ -13,6 +16,10 @@
     let scrollTimeout;
     onMount(() => {
         import("@google/model-viewer")
+
+        afterUpdate(() => {
+            document.title = "Projets | Yao Kissi";
+        });
 
         // Gestionnaire de défilement
         function handleScroll() {
@@ -45,7 +52,6 @@
 </script>
 
 <header>
-    <TopNavbar></TopNavbar>
 
     <div class="
                    bg-[var(--background)]
