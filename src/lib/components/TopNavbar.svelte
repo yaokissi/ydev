@@ -3,7 +3,6 @@
     import { slide } from 'svelte/transition';
     import { theme } from '../stores/theme';
     import avatarImage from '/src/assets/avatar1.png';
-    import { isNavbarVisible } from '../stores/navbar';
 
 
     const menuItems = [
@@ -58,6 +57,7 @@ text-[var(--text-primary)] py-4 transition-colors duration-300">
                         <a
                                 href={item.href}
                                 class="hover:text-[var(--text-secondary)] transition-colors duration-200"
+
                         >
                             {item.name}
                         </a>
@@ -125,7 +125,5 @@ text-[var(--text-primary)] py-4 transition-colors duration-300">
 </nav>
 </div>
 <style>
-
-
 
 </style>
