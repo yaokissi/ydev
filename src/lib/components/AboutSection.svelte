@@ -14,7 +14,7 @@ import grid4 from '/src/assets/grid4.png';
             <img src="{grid1}" alt="kissi yao about section grid" class="object-contain w-full h-[276px]" />
             <h2 class="text-white text-[var(--text-primary)] font-bold mt-4">Hi, I'm Yao KISSI</h2>
             <p class="text-white text-[var(--text-primary)] mt-5">
-                I am passionate about frontend development, while also capable of handling backend tasks when needed. I continuously improve my skills by working on projects and exploring new opportunities in the field. 🚀
+                I am passionate about frontend development, while also capable of handling backend tasks when needed. I continuously improve my skills by working on projects and exploring new opportunities in the field.
             </p>
         </div>
 
