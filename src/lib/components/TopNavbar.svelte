@@ -2,6 +2,7 @@
     import { Sun,Moon, LayoutGrid,  CircleX  } from 'lucide-svelte';
     import { slide } from 'svelte/transition';
     import { theme } from '../stores/theme';
+    import { page } from '$app/stores';
     import avatarImage from '/src/assets/avatar1.png';
 
 
@@ -31,6 +32,16 @@
         theme.update(currentTheme => currentTheme === 'dark' ? 'light' : 'dark');
     }
 
+    $: currentPath = $page.url.pathname;
+
+function isActive(href: string) {
+    if (href === '/') {
+        return currentPath === '/';
+    }
+    return href.startsWith('/#') 
+        ? false 
+        : currentPath.startsWith(href);
+}
 
 </script>
 <div class=""> <!-- bg-gradient-to-b from-[var(--background-gradient-from)] to-[var(--background-gradient-to)]-->
@@ -53,14 +64,16 @@ text-[var(--text-primary)] py-4 transition-colors duration-300">
             <!-- Menu Desktop -->
             <ul class="hidden md:!flex items-center space-x-8">
                 {#each menuItems as item}
-                    <li>
+                    <li class="relative py-2">
                         <a
-                                href={item.href}
-                                class="hover:text-[var(--text-secondary)] transition-colors duration-200"
-
+                            href={item.href}
+                            class="hover:text-[var(--text-secondary)] transition-colors duration-200 {isActive(item.href) ? 'text-[var(--text-secondary)] font-bold' : ''}"
                         >
                             {item.name}
                         </a>
+                        {#if isActive(item.href)}
+                            <div class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-500 via-cyan-400 to-transparent"></div>
+                        {/if}
                     </li>
                 {/each}
             </ul>

@@ -117,7 +117,6 @@ id="about">
     <div class="w-[90%] mx-auto flex flex-wrap justify-between text-white bg-[var(--background)] aboutSection">
         <ProExperiences ></ProExperiences>
         <SocialFeed ></SocialFeed>
-
     </div>
 </div>
 
@@ -135,8 +134,6 @@ id="about">
             width: 90%;
             margin-top: 10px;
         }
-
-
     }
     @media screen and (max-width: 480px) {
 .aboutSection {
