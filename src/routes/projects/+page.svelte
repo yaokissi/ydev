@@ -38,7 +38,7 @@
         {
             name: "Jersey Makers",
             description: "Tool to create your own wallpaper jersey with your favorite NBA team.",
-            link: "https://github.com/yaokissi/jersey-makers",
+            link: "http://hoopswall.free.nf/",
             logo: "https://i.ibb.co/ch5m4hts/basketball-jersey.png"
         }
     ]
