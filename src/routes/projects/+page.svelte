@@ -26,7 +26,7 @@
         {
             name: "Weather app",
             description: "Weather app to get the weather of any city.",
-            link: "https://github.com/yaokissi/Weather-App",
+            link: "https://myweatherapp-gamma.vercel.app/",
             logo: "https://upload.wikimedia.org/wikipedia/commons/1/1e/Weather_%28iOS%29.png"
         },
         {
